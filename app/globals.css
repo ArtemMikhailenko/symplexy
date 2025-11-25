@@ -2,25 +2,45 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground: #1c1d27;
+  
+  /* Symplexy Color Palette */
+  --color-white: #ffffff;
+  --color-dark-900: #1c1d27;
+  --color-blue-900: #223a6b;
+  --color-blue-700: #2d4b8c;
+  --color-gray-blue-500: #88a2c0;
+  --color-gray-blue-100: #dae2eb;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-rubik), system-ui, -apple-system, sans-serif;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent layout shift on scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* FAQ Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
 }
