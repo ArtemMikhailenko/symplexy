@@ -4,7 +4,7 @@ import Image from "next/image";
 import CTAButton from "./ui/CTAButton";
 import ChatIcon from "./ui/ChatIcon";
 import StarsIcon from "./ui/StarsIcon";
-
+//
 const steps = [
   {
     id: 1,
