@@ -14,7 +14,7 @@ export default function AboutSection() {
       {/* Background Cloud */}
       <div className="absolute right-0 top-[788px] w-[1027px] h-[671px] pointer-events-none hidden lg:block">
         <Image
-          src="/images/Cloud-about.png"
+          src="/images/Cloud-about.webp"
           alt=""
           fill
           className="object-contain"
@@ -24,11 +24,11 @@ export default function AboutSection() {
       {/* Crystal Flower Background - hidden on mobile/tablet */}
       <div className="absolute right-[160px] top-[348px] w-[760px] h-[760px] pointer-events-none hidden lg:block">
         <Image
-          src="/images/flover-about.png"
+          src="/images/flover-about.webp"
           alt=""
           fill
           className="object-contain"
-          priority
+          loading="lazy"
         />
       </div>
 
@@ -136,11 +136,11 @@ export default function AboutSection() {
         {/* Crystal Flower Image - mobile/tablet only, at bottom */}
         <div className="lg:hidden relative w-full max-w-[396px] h-[413px] mt-12 md:mt-16 -ml-[10px] md:ml-0">
           <Image
-            src="/images/flover-about.png"
+            src="/images/flover-about.webp"
             alt=""
             fill
             className="object-contain"
-            priority
+            loading="lazy"
           />
         </div>
       </div>

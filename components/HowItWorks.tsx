@@ -44,11 +44,11 @@ export default function HowItWorks() {
       {/* Desktop Decorative Flower/Crystal Image */}
       <div className="hidden lg:block absolute left-5 top-[192px] w-[1316px] h-[1093px] pb-10">
         <Image
-          src="/images/crystal-flower.png"
+          src="/images/crystal-flower.webp"
           alt="Decorative crystal flower"
           fill
           className="object-contain"
-          priority
+          loading="lazy"
         />
       </div>
 
@@ -69,11 +69,11 @@ export default function HowItWorks() {
       <div className="lg:hidden relative w-screen h-[515px] md:h-[600px] -mb-16 md:-mb-20 left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
         <div className="absolute inset-0">
           <Image
-            src="/images/crystal-flower-mob.png"
+            src="/images/crystal-flower-mob.webp"
             alt="Decorative crystal flower"
             fill
             className="object-cover"
-            priority
+            loading="lazy"
           />
         </div>
         {/* Gradient overlay for smooth transitions */}

@@ -60,11 +60,11 @@ export default function FAQSection() {
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-60 md:opacity-80 lg:opacity-100">
         <Image
-          src="/images/faq-bg.png"
+          src="/images/faq-bg.webp"
           alt="FAQ background decoration"
           fill
           className="object-cover w-full h-full"
-          priority
+          loading="lazy"
         />
       </div>
 

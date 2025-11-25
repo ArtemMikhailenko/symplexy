@@ -29,11 +29,11 @@ export default function NumbersSection() {
       {/* Background Lines Pattern */}
       <div className="absolute inset-0 w-full h-full lg:h-[904px] lg:-top-2">
         <Image
-          src="/images/purple-bg.png"
+          src="/images/purple-bg.webp"
           alt="Background pattern"
           fill
           className="object-cover"
-          priority
+          loading="lazy"
         />
       </div>
 

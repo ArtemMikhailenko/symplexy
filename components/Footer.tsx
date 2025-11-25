@@ -17,7 +17,7 @@ export default function Footer() {
       {/* Background Decorative Lines */}
       <div className="absolute left-0 bottom-40 w-[500px] h-[642px] pointer-events-none opacity-30 lg:opacity-100">
         <Image
-          src="/images/footer-line-left.png"
+          src="/images/footer-line-left.webp"
           alt=""
           fill
           className="object-cover"
@@ -25,7 +25,7 @@ export default function Footer() {
       </div>
       <div className="absolute right-0 top-0 w-[1000px] h-[302px] pointer-events-none opacity-30 lg:opacity-100">
         <Image
-          src="/images/footer-line-right.png"
+          src="/images/footer-line-right.webp"
           alt=""
           fill
           className="object-cover"

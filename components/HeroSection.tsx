@@ -20,7 +20,7 @@ export default function HeroSection() {
         {/* Cloud 2 - Top Mobile */}
         <div className="absolute -left-[19px] top-0 w-[375px] h-[265px] opacity-50">
           <Image
-            src="/images/hero-cloude.png"
+            src="/images/hero-cloude.webp"
             alt=""
             fill
             className="object-cover"
@@ -31,10 +31,11 @@ export default function HeroSection() {
         {/* Cloud - Bottom Mobile */}
         <div className="absolute left-[117px] top-[643px] w-[303px] h-[198px] opacity-50">
           <Image
-            src="/images/hero-cloude.png"
+            src="/images/hero-cloude.webp"
             alt=""
             fill
             className="object-cover"
+            loading="lazy"
           />
         </div>
       </div>
@@ -53,7 +54,7 @@ export default function HeroSection() {
       {/* Hero Image */}
       <div className="absolute right-0 bottom-0 w-full md:w-[900px] lg:w-[1110px] h-[550px] md:h-[700px] lg:h-[833px] pointer-events-none">
         <Image
-          src="/images/hero.png"
+          src="/images/hero.webp"
           alt="AI Assistant"
           fill
           className="object-contain object-bottom md:object-right"
