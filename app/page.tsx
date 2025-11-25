@@ -1,13 +1,32 @@
+import dynamic from "next/dynamic";
 import HeroSection from "@/components/HeroSection";
 import BrandsCarousel from "@/components/BrandsCarousel";
-import PopularNeuralNetworks from "@/components/PopularNeuralNetworks";
-import NumbersSection from "@/components/NumbersSection";
-import HowItWorks from "@/components/HowItWorks";
-import FAQSection from "@/components/FAQSection";
-import BlogSection from "@/components/BlogSection";
-import AboutSection from "@/components/AboutSection";
-import ContactForm from "@/components/ContactForm";
-import Footer from "@/components/Footer";
+
+// Lazy load components below the fold
+const PopularNeuralNetworks = dynamic(() => import("@/components/PopularNeuralNetworks"), {
+  loading: () => <div className="h-[600px]" />,
+});
+const NumbersSection = dynamic(() => import("@/components/NumbersSection"), {
+  loading: () => <div className="h-[400px]" />,
+});
+const HowItWorks = dynamic(() => import("@/components/HowItWorks"), {
+  loading: () => <div className="h-[600px]" />,
+});
+const FAQSection = dynamic(() => import("@/components/FAQSection"), {
+  loading: () => <div className="h-[500px]" />,
+});
+const BlogSection = dynamic(() => import("@/components/BlogSection"), {
+  loading: () => <div className="h-[600px]" />,
+});
+const AboutSection = dynamic(() => import("@/components/AboutSection"), {
+  loading: () => <div className="h-[400px]" />,
+});
+const ContactForm = dynamic(() => import("@/components/ContactForm"), {
+  loading: () => <div className="h-[500px]" />,
+});
+const Footer = dynamic(() => import("@/components/Footer"), {
+  loading: () => <div className="h-[300px]" />,
+});
 
 export default function Home() {
   return (

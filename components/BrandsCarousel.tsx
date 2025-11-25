@@ -74,6 +74,9 @@ export default function BrandsCarousel() {
                 alt={brand.name}
                 width={150}
                 height={60}
+                sizes="(max-width: 768px) 100px, 150px"
+                loading={index < 3 ? "eager" : "lazy"}
+                quality={80}
                 className="object-contain w-[100px] md:w-[150px] h-auto"
               />
             </div>

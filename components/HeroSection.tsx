@@ -23,6 +23,7 @@ export default function HeroSection() {
             src="/images/hero-cloude.webp"
             alt=""
             fill
+            sizes="375px"
             className="object-cover"
             priority
           />
@@ -34,6 +35,7 @@ export default function HeroSection() {
             src="/images/hero-cloude.webp"
             alt=""
             fill
+            sizes="303px"
             className="object-cover"
             loading="lazy"
           />
@@ -46,6 +48,8 @@ export default function HeroSection() {
           src="/images/hero-bg.webp"
           alt=""
           fill
+          sizes="100vw"
+          quality={85}
           className="object-cover object-top"
           priority
         />
@@ -57,6 +61,8 @@ export default function HeroSection() {
           src="/images/hero.webp"
           alt="AI Assistant"
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 900px, 1110px"
+          quality={90}
           className="object-contain object-bottom md:object-right"
           priority
         />
