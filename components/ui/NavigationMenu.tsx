@@ -1,24 +1,23 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
+import { useTranslations } from 'next-intl';
 
 interface MenuItem {
-  label: string;
+  labelKey: string;
   href: string;
 }
 
 const menuItems: MenuItem[] = [
-  { label: "ШІ-інструменти", href: "#ai-tools" },
-  { label: "Для кого?", href: "#for-whom" },
-  { label: "Як це працює?", href: "#how-it-works" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Про нас", href: "#about" },
-  { label: "Блог", href: "#blog" },
+  { labelKey: "aiTools", href: "#ai-tools" },
+  { labelKey: "howItWorks", href: "#how-it-works" },
+  { labelKey: "blog", href: "#blog" },
+  { labelKey: "about", href: "#about" },
 ];
 
 export default function NavigationMenu() {
   const [activeItem, setActiveItem] = useState<string>("");
+  const t = useTranslations('header.nav');
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -33,20 +32,20 @@ export default function NavigationMenu() {
   return (
     <nav className="hidden lg:flex items-center gap-0">
       {menuItems.map((item) => (
-        <Link
+        <a
           key={item.href}
           href={item.href}
           onClick={(e) => handleClick(e, item.href)}
           className={`
             px-4 py-3 rounded-[50px] text-base font-normal
             transition-all duration-200 ease-in-out
-            hover:bg-gray-100 active:bg-gray-200
+            hover:bg-gray-100 active:bg-gray-200 cursor-pointer
             ${activeItem === item.href ? "bg-gray-100" : ""}
             text-[#1c1d27]
           `}
         >
-          {item.label}
-        </Link>
+          {t(item.labelKey)}
+        </a>
       ))}
     </nav>
   );

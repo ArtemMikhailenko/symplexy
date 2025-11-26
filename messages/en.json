@@ -1,0 +1,197 @@
+{
+  "header": {
+    "nav": {
+      "home": "Home",
+      "aiTools": "AI Tools",
+      "howItWorks": "How It Works",
+      "blog": "Blog",
+      "about": "About Us"
+    },
+    "cta": "Find Tools",
+    "languageLabel": "Language"
+  },
+  "hero": {
+    "title": "AI Solutions",
+    "titleHighlight": "Selection Service",
+    "titleEnd": "for Your Business",
+    "description": "Find, compare, and apply the best neural networks to grow your business",
+    "cta": {
+      "primary": "Find Tools",
+      "secondary": "Learn More"
+    }
+  },
+  "numbers": {
+    "mainTitle": "Find what's slowing down",
+    "mainTitleHighlight": "your growth",
+    "mainDescription": "We identify where business is losing and offer solutions that restore efficiency and accelerate growth",
+    "title": "Integration of neural networks into business processes gives the following",
+    "titleHighlight": "results:",
+    "stats": {
+      "time": "Time savings on routine tasks (marketing, communications, documentation, support)",
+      "costs": "Cost savings on operational processes (outsourcing, advertising, management)",
+      "conversion": "Increase in sales conversion or lead generation through personalization and faster response"
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "steps": {
+      "choose": {
+        "title": "Choose a Category",
+        "description": "Select the area where you need AI assistance"
+      },
+      "compare": {
+        "title": "Compare Tools",
+        "description": "Review features and pricing of different solutions"
+      },
+      "implement": {
+        "title": "Implement",
+        "description": "Get detailed implementation instructions"
+      }
+    }
+  },
+  "aiTools": {
+    "title": "Popular Neural Networks",
+    "subtitle": "Best AI tools for your business",
+    "categories": {
+      "all": "All",
+      "design": "Design",
+      "content": "Content",
+      "video": "Video",
+      "marketing": "Marketing"
+    },
+    "card": {
+      "rating": "Rating",
+      "learnMore": "Learn More",
+      "freeTrial": "Free Trial",
+      "from": "from"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to the most common questions",
+    "items": {
+      "what": {
+        "question": "What is Symplexy?",
+        "answer": "Symplexy is a platform for selecting optimal AI solutions for your business. We help you find and compare the best neural networks."
+      },
+      "how": {
+        "question": "How to choose a tool?",
+        "answer": "Select a category, specify your needs, and we'll find the best options with detailed comparison of features and prices."
+      },
+      "free": {
+        "question": "Is the service free?",
+        "answer": "Yes, tool selection and basic recommendations are completely free. Premium features are available for advanced analysis."
+      },
+      "support": {
+        "question": "What support is provided?",
+        "answer": "We provide selection consultations, implementation instructions, and 24/7 technical support."
+      }
+    }
+  },
+  "blog": {
+    "title": "Latest News",
+    "subtitle": "Current articles about AI and business",
+    "readMore": "Read More",
+    "publishedOn": "Published on"
+  },
+  "about": {
+    "title": "About Symplexy",
+    "description": "We help businesses find and implement optimal AI solutions for process automation and efficiency improvement.",
+    "mission": "Our mission is to make artificial intelligence accessible to every business",
+    "stats": {
+      "experience": "years of experience",
+      "projects": "successful projects",
+      "experts": "AI experts"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Ready to start? Write to us!",
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Enter your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "your@email.com"
+      },
+      "company": {
+        "label": "Company",
+        "placeholder": "Your company name"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell us about your project..."
+      },
+      "submit": "Send",
+      "sending": "Sending...",
+      "success": "Message sent!",
+      "error": "Sending error"
+    }
+  },
+  "footer": {
+    "tagline": "Your assistant in the world of artificial intelligence",
+    "menu": {
+      "product": {
+        "title": "Product",
+        "links": {
+          "features": "Features",
+          "pricing": "Pricing",
+          "aiTools": "AI Tools",
+          "updates": "Updates"
+        }
+      },
+      "company": {
+        "title": "Company",
+        "links": {
+          "about": "About",
+          "blog": "Blog",
+          "careers": "Careers",
+          "contact": "Contact"
+        }
+      },
+      "resources": {
+        "title": "Resources",
+        "links": {
+          "documentation": "Documentation",
+          "guides": "Guides",
+          "support": "Support",
+          "faq": "FAQ"
+        }
+      },
+      "legal": {
+        "title": "Legal",
+        "links": {
+          "privacy": "Privacy",
+          "terms": "Terms of Use",
+          "cookies": "Cookies"
+        }
+      }
+    },
+    "copyright": "© 2025 Symplexy. All rights reserved.",
+    "madeWith": "Made with",
+    "in": "in Ukraine"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "more": "More",
+    "less": "Less",
+    "showAll": "Show All",
+    "showLess": "Show Less"
+  },
+  "metadata": {
+    "title": "Symplexy - AI Solutions Selection Service for Business",
+    "description": "Find the best AI tools for your business. Symplexy helps you select optimal neural networks for workflow automation.",
+    "keywords": "AI, artificial intelligence, neural networks, business, automation, Symplexy"
+  }
+}

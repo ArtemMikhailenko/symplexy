@@ -1,8 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
 
 export default function HeroSection() {
+  const t = useTranslations('hero');
+  
   const handleToolsClick = () => {
     const target = document.querySelector("#ai-tools");
     if (target) {
@@ -74,11 +77,11 @@ export default function HeroSection() {
           {/* Headline */}
           <div className="mb-8 md:mb-12">
             <h1 className="text-[44px] leading-[52px] md:text-5xl md:leading-[60px] lg:text-[72px] lg:leading-[84px] font-bold text-[#1c1d27] mb-4 md:mb-6">
-              Сервіс підбору{" "}
-              <span className="text-[#5289ff]">ШІ-рішень</span> для вашого бізнесу
+              {t('title')}{" "}
+              <span className="text-[#5289ff]">{t('titleHighlight')}</span> {t('titleEnd')}
             </h1>
             <p className="text-[18px] leading-[28px] md:text-lg md:leading-7 text-[#1c1d27]">
-              Знаходьте, порівнюйте та застосовуйте найкращі нейромережі для зростання Вашого бізнесу
+              {t('description')}
             </p>
           </div>
 
@@ -95,7 +98,7 @@ export default function HeroSection() {
                 shadow-sm hover:shadow-md
               "
             >
-              Підібрати інструменти
+              {t('cta.primary')}
             </button>
             <button
               className="
@@ -107,7 +110,7 @@ export default function HeroSection() {
                 transition-all duration-200 ease-in-out
               "
             >
-              Cпитати ШІ-асистента
+              {t('cta.secondary')}
             </button>
           </div>
         </div>

@@ -185,7 +185,7 @@ export default function Footer() {
            
               <div className="flex flex-col gap-3">
                 <Image
-                  src="images/Logo-footer.svg"
+                  src="/images/Logo-footer.svg"
                   alt="SYMPLEXY"
                   width={373}
                   height={112}

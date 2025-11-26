@@ -1,29 +1,31 @@
 "use client";
 
 import Image from "next/image";
-
-const stats = [
-  {
-    id: 1,
-    percentage: "60%",
-    description: "Економія часу на рутинні завдання (маркетинг, комунікації, документообіг, підтримка)",
-    color: "#5289ff",
-  },
-  {
-    id: 2,
-    percentage: "45%",
-    description: "Економія витрат на операційні процеси (аутсорс, реклама, менеджмент)",
-    color: "#5289ff",
-  },
-  {
-    id: 3,
-    percentage: "26%",
-    description: "Збільшення конверсії у продажах чи залученні лідів через персоналізацію та швидшу реакцію",
-    color: "#5289ff",
-  },
-];
+import { useTranslations } from 'next-intl';
 
 export default function NumbersSection() {
+  const t = useTranslations('numbers');
+  
+  const stats = [
+    {
+      id: 1,
+      percentage: "60%",
+      description: t('stats.time'),
+      color: "#5289ff",
+    },
+    {
+      id: 2,
+      percentage: "45%",
+      description: t('stats.costs'),
+      color: "#5289ff",
+    },
+    {
+      id: 3,
+      percentage: "26%",
+      description: t('stats.conversion'),
+      color: "#5289ff",
+    },
+  ];
   return (
     <section className="relative w-full min-h-screen md:min-h-[800px] lg:h-[896px] bg-[#1c1d27] overflow-hidden py-16 md:py-20 lg:py-24">
       {/* Background Lines Pattern */}
@@ -51,11 +53,11 @@ export default function NumbersSection() {
         {/* Top Headline */}
         <div className="mb-12 md:mb-16 lg:mb-24">
           <h2 className="text-[40px] leading-[48px] md:text-[48px] md:leading-[56px] lg:text-[56px] lg:leading-[64px] font-bold text-white mb-4 md:mb-5 lg:mb-6 text-left md:text-center">
-            Знайди, що гальмує{" "}
-            <span className="text-[#5289ff]">твій розвиток</span>
+            {t('mainTitle')}{" "}
+            <span className="text-[#5289ff]">{t('mainTitleHighlight')}</span>
           </h2>
           <p className="text-[18px] leading-[28px] font-normal text-white max-w-full md:max-w-[606px] md:mx-auto text-left md:text-center">
-            Ми визначаємо, де бізнес втрачає, і пропонуємо рішення, що відновлюють ефективність і прискорюють ріст
+            {t('mainDescription')}
           </p>
         </div>
 
@@ -64,8 +66,8 @@ export default function NumbersSection() {
           {/* Section Title */}
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-8 lg:mb-12">
             <h3 className="text-[28px] leading-[36px] md:text-[36px] md:leading-[44px] lg:text-[40px] lg:leading-[48px] font-bold text-white max-w-full lg:max-w-[711px] mb-6 lg:mb-0">
-              Інтеграція нейромереж у бізнес-процеси дає наступні{" "}
-              <span className="text-[#5289ff]">результати:</span>
+              {t('title')}{" "}
+              <span className="text-[#5289ff]">{t('titleHighlight')}</span>
             </h3>
           </div>
 

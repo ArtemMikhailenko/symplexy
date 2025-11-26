@@ -1,28 +1,18 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import createMiddleware from 'next-intl/middleware';
+import { locales, defaultLocale } from './i18n';
 
-export function middleware(request: NextRequest) {
-  const response = NextResponse.next();
+export default createMiddleware({
+  // A list of all locales that are supported
+  locales,
 
-  // Add security headers
-  response.headers.set('X-DNS-Prefetch-Control', 'on');
-  response.headers.set('X-Frame-Options', 'SAMEORIGIN');
-  response.headers.set('X-Content-Type-Options', 'nosniff');
-  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
-  
-  // Cache static assets aggressively
-  if (request.nextUrl.pathname.startsWith('/images/')) {
-    response.headers.set(
-      'Cache-Control',
-      'public, max-age=31536000, immutable'
-    );
-  }
+  // Used when no locale matches
+  defaultLocale,
 
-  return response;
-}
+  // Don't use a prefix for the default locale
+  localePrefix: 'as-needed',
+});
 
 export const config = {
-  matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
-  ],
+  // Match only internationalized pathnames
+  matcher: ['/', '/(uk|en)/:path*', '/((?!api|_next|_vercel|.*\\..*).*)'],
 };

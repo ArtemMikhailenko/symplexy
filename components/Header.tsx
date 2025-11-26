@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from 'next-intl';
 import Logo from "./ui/Logo";
 import NavigationMenu from "./ui/NavigationMenu";
 import LanguageSwitch from "./ui/LanguageSwitch";
@@ -9,6 +10,7 @@ import MobileMenu from "./ui/MobileMenu";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const t = useTranslations('header');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,8 +62,16 @@ export default function Header() {
               <LanguageSwitch />
             </div>
             <div className="hidden lg:block">
-              <CTAButton variant="primary">
-                Підібрати інструменти
+              <CTAButton 
+                variant="primary"
+                onClick={() => {
+                  const target = document.querySelector("#ai-tools");
+                  if (target) {
+                    target.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }
+                }}
+              >
+                {t('cta')}
               </CTAButton>
             </div>
             {/* Mobile Menu */}
