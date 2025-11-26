@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function ContactForm() {
+  const t = useTranslations("contact");
   const [formData, setFormData] = useState({
     email: "",
     topic: "",
@@ -57,13 +59,12 @@ export default function ContactForm() {
             {/* Left Side - Heading */}
             <div className="flex-1 max-w-[472px]">
               <h2 className="text-white text-[40px] lg:text-[56px] leading-[48px] lg:leading-[64px] font-bold mb-6">
-                Залишилися питання, <span className="text-[#6b9aff]">або</span>
+                {t("title.part1")} <span className="text-[#6b9aff]">{t("title.part2")}</span>
                 <br />
-                <span className="text-[#6b9aff]">є пропозиції?</span>
+                <span className="text-[#6b9aff]">{t("title.part3")}</span>
               </h2>
               <p className="text-white text-[18px] leading-7 font-normal">
-                Напишіть нам. Ми з радістю відповімо на будь-яке питання, або
-                розглянемо вашу пропозицію.
+                {t("description")}
               </p>
             </div>
 
@@ -74,7 +75,7 @@ export default function ContactForm() {
                 <div className="w-full">
                   <input
                     type="email"
-                    placeholder="Електронна пошта"
+                    placeholder={t("form.email")}
                     value={formData.email}
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
@@ -100,18 +101,18 @@ export default function ContactForm() {
                     }}
                     required
                   >
-                    <option value="">Тематика звернення</option>
-                    <option value="general">Загальне питання</option>
-                    <option value="partnership">Партнерство</option>
-                    <option value="support">Підтримка</option>
-                    <option value="other">Інше</option>
+                    <option value="">{t("form.topic.placeholder")}</option>
+                    <option value="general">{t("form.topic.general")}</option>
+                    <option value="partnership">{t("form.topic.partnership")}</option>
+                    <option value="support">{t("form.topic.support")}</option>
+                    <option value="other">{t("form.topic.other")}</option>
                   </select>
                 </div>
 
                 {/* Message Textarea */}
                 <div className="w-full">
                   <textarea
-                    placeholder="Опишіть ваше питання чи пропозицію"
+                    placeholder={t("form.message")}
                     value={formData.message}
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
@@ -154,8 +155,7 @@ export default function ContactForm() {
                     htmlFor="privacy"
                     className="text-[#a8a9b4] text-[14px] leading-5 cursor-pointer"
                   >
-                    Я погоджуюся з політикою конфіденційності веб-сайту та
-                    обробкою даних
+                    {t("form.privacy")}
                   </label>
                 </div>
 
@@ -164,7 +164,7 @@ export default function ContactForm() {
                   type="submit"
                   className="w-full h-[56px] mt-2 px-6 py-4 bg-[#5289ff] hover:bg-[#2d4b8c] text-white text-[18px] leading-6 font-normal rounded-full transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
                 >
-                  <span>Надіслати</span>
+                  <span>{t("form.submit")}</span>
                   <svg
                     width="24"
                     height="24"

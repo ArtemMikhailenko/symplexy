@@ -1,6 +1,7 @@
 "use client";
 
 import BlogCard from "@/components/ui/BlogCard";
+import { useTranslations } from "next-intl";
 
 interface BlogPost {
   id: number;
@@ -69,6 +70,8 @@ const blogPosts: BlogPost[] = [
 ];
 
 export default function BlogSection() {
+  const t = useTranslations("blog");
+
   return (
     <section
       id="blog"
@@ -96,12 +99,10 @@ export default function BlogSection() {
             {/* Header */}
             <div className="max-w-[501px]">
               <h2 className="text-white text-[40px] lg:text-[56px] leading-[48px] lg:leading-[64px] font-bold mb-6">
-                Блог
+                {t("title")}
               </h2>
               <p className="text-white text-[18px] leading-7 font-normal">
-                Ми стежимо за трендами штучного інтелекту та регулярно ділимось
-                новинами, оглядами й корисними інструментами для розвитку вашого
-                бізнесу.
+                {t("description")}
               </p>
             </div>
 
@@ -122,7 +123,7 @@ export default function BlogSection() {
             {/* View All Button */}
             <div className="flex justify-center">
               <button className="group flex items-center gap-2 px-6 py-4 bg-[#5289ff] hover:bg-[#2d4b8c] text-white text-[18px] leading-6 font-normal rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
-                <span>Дивитись всі статті</span>
+                <span>{t("viewAll")}</span>
                 <svg
                   width="24"
                   height="24"

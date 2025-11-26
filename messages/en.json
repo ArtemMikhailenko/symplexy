@@ -54,6 +54,11 @@
   },
   "aiTools": {
     "title": "Popular Neural Networks",
+    "cta": {
+      "text1": "All services can be",
+      "text2": "tried for free",
+      "button": "Go to Catalog"
+    },
     "subtitle": "Best AI tools for your business",
     "categories": {
       "all": "All",
@@ -107,41 +112,49 @@
     }
   },
   "blog": {
-    "title": "Latest News",
-    "subtitle": "Current articles about AI and business",
+    "title": "Blog",
+    "description": "We track trends in artificial intelligence and regularly share news, reviews, and useful tools for your business development.",
+    "viewAll": "View All Articles",
     "readMore": "Read More",
-    "publishedOn": "Published on"
+    "publishedOn": "Published"
   },
   "about": {
-    "title": "About Symplexy",
-    "description": "We help businesses find and implement optimal AI solutions for process automation and efficiency improvement.",
-    "mission": "Our mission is to make artificial intelligence accessible to every business",
-    "stats": {
-      "experience": "years of experience",
-      "projects": "successful projects",
-      "experts": "AI experts"
+    "title": "A Bit About Us",
+    "description": "Symplexy is a service that selects AI tools for business. We help entrepreneurs quickly find solutions for automation, optimization, and development.",
+    "mission": "Our mission is to make the integration of artificial intelligence into business simpler, clearer, and more useful",
+    "whatWeDo": {
+      "title": "What We Do",
+      "item1": "Select relevant AI tools for specific business tasks"
+    },
+    "whyChoose": {
+      "title": "Why Choose Symplexy",
+      "item1": "Convenient catalog that is constantly updated",
+      "item2": "Simple search and filters for quick selection",
+      "item3": "Trust of entrepreneurs who are already implementing AI solutions in their work"
+    },
+    "ourFocus": {
+      "title": "Our Focus",
+      "text": "We believe that the future of business lies in smart automation. Symplexy helps take the first step towards this future today."
     }
   },
   "contact": {
-    "title": "Contact Us",
-    "subtitle": "Ready to start? Write to us!",
+    "title": {
+      "part1": "Have questions,",
+      "part2": "or",
+      "part3": "have suggestions?"
+    },
+    "description": "Write to us. We will be happy to answer any question, or consider your suggestion.",
     "form": {
-      "name": {
-        "label": "Name",
-        "placeholder": "Enter your name"
+      "email": "Email address",
+      "topic": {
+        "placeholder": "Topic of inquiry",
+        "general": "General question",
+        "partnership": "Partnership",
+        "support": "Support",
+        "other": "Other"
       },
-      "email": {
-        "label": "Email",
-        "placeholder": "your@email.com"
-      },
-      "company": {
-        "label": "Company",
-        "placeholder": "Your company name"
-      },
-      "message": {
-        "label": "Message",
-        "placeholder": "Tell us about your project..."
-      },
+      "message": "Describe your question or suggestion",
+      "privacy": "I agree with the website's privacy policy and data processing",
       "submit": "Send",
       "sending": "Sending...",
       "success": "Message sent!",
@@ -149,47 +162,30 @@
     }
   },
   "footer": {
-    "tagline": "Your assistant in the world of artificial intelligence",
-    "menu": {
-      "product": {
-        "title": "Product",
-        "links": {
-          "features": "Features",
-          "pricing": "Pricing",
-          "aiTools": "AI Tools",
-          "updates": "Updates"
-        }
-      },
-      "company": {
-        "title": "Company",
-        "links": {
-          "about": "About",
-          "blog": "Blog",
-          "careers": "Careers",
-          "contact": "Contact"
-        }
-      },
-      "resources": {
-        "title": "Resources",
-        "links": {
-          "documentation": "Documentation",
-          "guides": "Guides",
-          "support": "Support",
-          "faq": "FAQ"
-        }
-      },
-      "legal": {
-        "title": "Legal",
-        "links": {
-          "privacy": "Privacy",
-          "terms": "Terms of Use",
-          "cookies": "Cookies"
-        }
-      }
+    "newsletter": {
+      "title": "Stay with us",
+      "description": "Weekly selections of new AI tools and news about Simplexy. We promise not to spam)",
+      "emailPlaceholder": "Email address",
+      "subscribe": "Subscribe"
     },
-    "copyright": "© 2025 Symplexy. All rights reserved.",
-    "madeWith": "Made with",
-    "in": "in Ukraine"
+    "menu": {
+      "catalog": "Neural Network Catalog",
+      "assistant": "Business Assistant",
+      "howItWorks": "How It Works",
+      "about": "About Us",
+      "blog": "Blog"
+    },
+    "social": {
+      "title": "Social Networks"
+    },
+    "messengers": {
+      "title": "Messengers"
+    },
+    "legal": {
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy"
+    },
+    "copyright": "© 2025 Simplexy. All rights reserved."
   },
   "common": {
     "loading": "Loading...",

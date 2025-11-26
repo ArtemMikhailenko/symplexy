@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("footer");
   const [email, setEmail] = useState("");
 
   const handleSubscribe = (e: React.FormEvent) => {
@@ -53,11 +55,10 @@ export default function Footer() {
             <div className="bg-[#15202e] border border-[#525c71] rounded-2xl p-6">
               <div className="mb-8">
                 <h3 className="text-[#eceefc] text-[24px] leading-8 font-semibold text-center mb-2">
-                  Залишайтеся з нами
+                  {t("newsletter.title")}
                 </h3>
                 <p className="text-[#d7daeb] text-[16px] leading-6 text-center">
-                  Щотижневі підбірки нових AI‑інструментів та новини про
-                  Simplexy. Обіцяємо не спамити)
+                  {t("newsletter.description")}
                 </p>
               </div>
 
@@ -74,7 +75,7 @@ export default function Footer() {
                   type="submit"
                   className="w-full h-12 px-5 py-3 bg-[#5289ff] hover:bg-[#4278ef] text-white text-[16px] leading-6 font-normal rounded-full transition-all duration-200"
                 >
-                  Підписатися
+                  {t("newsletter.subscribe")}
                 </button>
               </form>
             </div>
@@ -85,27 +86,27 @@ export default function Footer() {
             <ul className="flex flex-col">
               <li className="h-12 flex items-center justify-center">
                 <a href="#catalog" className="text-[#eef3ff] text-[20px] leading-7 font-semibold hover:text-[#5289ff] transition-colors">
-                  Каталог нейромереж
+                  {t("menu.catalog")}
                 </a>
               </li>
               <li className="h-12 flex items-center justify-center">
                 <a href="#assistant" className="text-[#eef3ff] text-[20px] leading-7 font-semibold hover:text-[#5289ff] transition-colors">
-                  Бізнес-асистент
+                  {t("menu.assistant")}
                 </a>
               </li>
               <li className="h-12 flex items-center justify-center">
                 <a href="#how-it-works" className="text-[#eef3ff] text-[20px] leading-7 font-semibold hover:text-[#5289ff] transition-colors">
-                  Як це працює
+                  {t("menu.howItWorks")}
                 </a>
               </li>
               <li className="h-12 flex items-center justify-center">
                 <a href="#about" className="text-[#eef3ff] text-[20px] leading-7 font-semibold hover:text-[#5289ff] transition-colors">
-                  Про нас
+                  {t("menu.about")}
                 </a>
               </li>
               <li className="h-12 flex items-center justify-center">
                 <a href="#blog" className="text-[#eef3ff] text-[20px] leading-7 font-semibold hover:text-[#5289ff] transition-colors">
-                  Блог
+                  {t("menu.blog")}
                 </a>
               </li>
             </ul>
@@ -116,7 +117,7 @@ export default function Footer() {
             {/* Social Networks */}
             <div>
               <h4 className="text-[#eef3ff] text-[18px] leading-7 font-normal text-center mb-4">
-                Соціальні мережі
+                {t("social.title")}
               </h4>
               <div className="flex gap-3 justify-center">
                 <a href="#" className="w-12 h-12 bg-[#313c4a] hover:bg-[#5289ff] rounded-lg flex items-center justify-center transition-colors" aria-label="TikTok">
@@ -143,7 +144,7 @@ export default function Footer() {
             {/* Messengers */}
             <div>
               <h4 className="text-[#eef3ff] text-[18px] leading-7 font-normal text-center mb-4">
-                Месенджери
+                {t("messengers.title")}
               </h4>
               <div className="flex gap-3 justify-center">
                 <a href="#" className="w-12 h-12 bg-[#313c4a] hover:bg-[#5289ff] rounded-lg flex items-center justify-center transition-colors" aria-label="Telegram">
@@ -170,9 +171,9 @@ export default function Footer() {
           {/* Legal Section - Mobile */}
           <div className="w-full max-w-[343px] mx-auto pt-10 border-t border-[#42455c]">
             <div className="flex flex-col items-center gap-4 text-[#686a7d] text-[14px] leading-5">
-              <p className="text-center">© 2025 Simplexy. Усі права захищено</p>
-              <a href="#" className="hover:text-[#5289ff] transition-colors">Договір оферти</a>
-              <a href="#" className="hover:text-[#5289ff] transition-colors">Політика конфіденційності</a>
+              <p className="text-center">{t("copyright")}</p>
+              <a href="#" className="hover:text-[#5289ff] transition-colors">{t("legal.terms")}</a>
+              <a href="#" className="hover:text-[#5289ff] transition-colors">{t("legal.privacy")}</a>
             </div>
           </div>
         </div>
@@ -201,18 +202,17 @@ export default function Footer() {
             <div className="bg-[#15202e] border border-[#525c71] rounded-[24px] p-6 max-h-[230px]">
               <div className="mb-6">
                 <h3 className="text-[#eceefc] text-[24px] leading-8 font-medium mb-2">
-                  Залишайтеся з нами
+                  {t("newsletter.title")}
                 </h3>
                 <p className="text-[#d7daeb] text-[18px] leading-7 font-normal">
-                  Щотижневі підбірки нових AI‑інструментів та новини про
-                  Simplexy. Обіцяємо не спамити)
+                  {t("newsletter.description")}
                 </p>
               </div>
 
               <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4">
                 <input
                   type="email"
-                  placeholder="Електронна пошта"
+                  placeholder={t("newsletter.emailPlaceholder")}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="flex-1 sm:w-[340px] h-[56px] px-5 py-4 bg-[#eef3ff] border border-[#afc9ff] rounded-2xl text-[#3c3f54] text-[16px] leading-6 placeholder:text-[#3c3f54] focus:outline-none focus:border-[#5289ff] transition-colors"
@@ -222,7 +222,7 @@ export default function Footer() {
                   type="submit"
                   className="w-full sm:w-[158px] h-[56px] px-6 py-4 bg-[#5289ff] hover:bg-[#2d4b8c] text-white text-[18px] leading-6 font-normal rounded-full transition-all duration-300 whitespace-nowrap"
                 >
-                  Підписатися
+                  {t("newsletter.subscribe")}
                 </button>
               </form>
             </div>
@@ -238,7 +238,7 @@ export default function Footer() {
                     href="#catalog"
                     className="block text-[#eef3ff] text-[24px] leading-8 font-medium hover:text-[#5289ff] transition-colors"
                   >
-                    Каталог нейромереж
+                    {t("menu.catalog")}
                   </a>
                 </li>
                 <li className="py-2">
@@ -246,7 +246,7 @@ export default function Footer() {
                     href="#assistant"
                     className="block text-[#eef3ff] text-[24px] leading-8 font-medium hover:text-[#5289ff] transition-colors"
                   >
-                    Бізнес-асистент
+                    {t("menu.assistant")}
                   </a>
                 </li>
                 <li className="py-2">
@@ -254,7 +254,7 @@ export default function Footer() {
                     href="#how-it-works"
                     className="block text-[#eef3ff] text-[24px] leading-8 font-medium hover:text-[#5289ff] transition-colors"
                   >
-                    Як це працює
+                    {t("menu.howItWorks")}
                   </a>
                 </li>
                 <li className="py-2">
@@ -262,7 +262,7 @@ export default function Footer() {
                     href="#about"
                     className="block text-[#eef3ff] text-[24px] leading-8 font-medium hover:text-[#5289ff] transition-colors"
                   >
-                    Про нас
+                    {t("menu.about")}
                   </a>
                 </li>
                 <li className="py-2">
@@ -270,7 +270,7 @@ export default function Footer() {
                     href="#blog"
                     className="block text-[#eef3ff] text-[24px] leading-8 font-medium hover:text-[#5289ff] transition-colors"
                   >
-                    Блог
+                    {t("menu.blog")}
                   </a>
                 </li>
               </ul>
@@ -281,7 +281,7 @@ export default function Footer() {
               {/* Social Networks */}
               <div>
                 <h4 className="text-[#eef3ff] text-[18px] leading-7 font-normal mb-3">
-                  Соціальні мережі
+                  {t("social.title")}
                 </h4>
                 <div className="flex gap-3">
                   {/* TikTok */}
@@ -361,7 +361,7 @@ export default function Footer() {
               {/* Messengers */}
               <div>
                 <h4 className="text-[#eef3ff] text-[18px] leading-7 font-normal mb-3">
-                  Месенджери
+                  {t("messengers.title")}
                 </h4>
                 <div className="flex gap-3">
                   {/* Telegram */}
@@ -452,12 +452,12 @@ export default function Footer() {
         <div className="pt-6 border-t border-[#42455c]">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-[#686a7d] text-[14px] leading-5">
             <a href="#" className="hover:text-[#5289ff] transition-colors">
-              Договір оферти
+              {t("legal.terms")}
             </a>
             <a href="#" className="hover:text-[#5289ff] transition-colors">
-              Політика конфіденційності
+              {t("legal.privacy")}
             </a>
-            <p>© 2025 Simplexy. Усі права захищено</p>
+            <p>{t("copyright")}</p>
           </div>
         </div>
           </div>

@@ -2,6 +2,7 @@
 
 import ProductCard from "./ui/ProductCard";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 const products = [
   {
@@ -55,6 +56,7 @@ const products = [
 ];
 
 export default function PopularNeuralNetworks() {
+  const t = useTranslations("aiTools");
   const [showChatHint, setShowChatHint] = useState(true);
 
   return (
@@ -73,7 +75,7 @@ export default function PopularNeuralNetworks() {
       <div className="relative max-w-[1220px] mx-auto px-4 md:px-6 lg:px-5">
         {/* Title */}
         <h2 className="text-[40px] leading-[48px] md:text-[48px] md:leading-[56px] lg:text-[56px] lg:leading-[64px] font-bold text-[#263e6e] text-center mb-8 md:mb-16 lg:mb-28">
-          Популярні нейромережі
+          {t("title")}
         </h2>
 
         {/* Cards Grid */}
@@ -86,11 +88,11 @@ export default function PopularNeuralNetworks() {
         {/* Bottom CTA */}
         <div className="w-full max-w-[343px] md:max-w-[708px] lg:max-w-[1236px] mx-auto flex flex-col items-center justify-center gap-6">
           <h3 className="w-full max-w-[343px] md:max-w-[501px] text-[24px] leading-[32px] md:text-[28px] md:leading-[36px] lg:text-[32px] lg:leading-[40px] font-normal text-[#1c1d27] text-center">
-            Всі сервіси можна{" "}
-            <span className="font-semibold">спробувати безкоштовно</span>
+            {t("cta.text1")}{" "}
+            <span className="font-semibold">{t("cta.text2")}</span>
           </h3>
           <button className="w-full max-w-[343px] md:w-auto md:min-w-[241px] h-14 px-6 py-4 bg-[#5289ff] text-white text-[18px] leading-[24px] font-normal rounded-[100px] hover:bg-[#4178ee] active:bg-[#3067dd] transition-colors duration-200 flex items-center justify-center gap-2 whitespace-nowrap">
-            Перейти в каталог
+            {t("cta.button")}
             <svg
               width="24"
               height="24"
