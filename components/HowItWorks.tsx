@@ -62,7 +62,7 @@ export default function HowItWorks() {
             {t('title')}
           </h2>
           <p className="text-[18px] leading-[28px] font-normal text-[#3c3f54] max-w-[343px] md:max-w-full mx-auto">
-            Підвищуйте ефективність свого бізнесу за 4 простих кроки
+            {t('subtitle')}
           </p>
         </div>
       </div>

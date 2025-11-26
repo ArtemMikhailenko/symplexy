@@ -131,8 +131,14 @@ export default function PopularNeuralNetworks() {
         {/* Hint - Hide on mobile */}
         {showChatHint && (
           <div className="hidden md:block relative bg-white border border-[#c2c8ef] rounded-[20px] px-4 py-3 shadow-lg">
-            <p className="text-[16px] leading-[19px] text-[#182155] whitespace-nowrap">
-              {t("chat.hint")}
+            <p className="text-[16px] leading-[19px] text-[#182155] text-center">
+              {t("chat.hint").split(' ').map((word, i, arr) => (
+                i === Math.floor(arr.length / 2) ? (
+                  <span key={i}><br />{word} </span>
+                ) : (
+                  <span key={i}>{word} </span>
+                )
+              ))}
             </p>
             {/* Arrow */}
             <div className="absolute -right-2 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[10px] border-l-white" />

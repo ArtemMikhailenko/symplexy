@@ -16,33 +16,19 @@ export default function HeroSection() {
   return (
     <section 
       id="hero" 
-      className="relative w-full min-h-[958px] md:min-h-[800px] lg:min-h-[914px] bg-white overflow-hidden"
+      className="relative w-full min-h-[900px] md:min-h-[800px] lg:min-h-[914px] bg-white"
     >
-      {/* Background Clouds - Mobile */}
-      <div className="absolute inset-0 pointer-events-none md:hidden">
-        {/* Cloud 2 - Top Mobile */}
-        <div className="absolute -left-[19px] top-0 w-[375px] h-[265px] opacity-50">
-          <Image
-            src="/images/hero-cloude.webp"
-            alt=""
-            fill
-            sizes="375px"
-            className="object-cover"
-            priority
-          />
-        </div>
-        
-        {/* Cloud - Bottom Mobile */}
-        <div className="absolute left-[117px] top-[643px] w-[303px] h-[198px] opacity-50">
-          <Image
-            src="/images/hero-cloude.webp"
-            alt=""
-            fill
-            sizes="303px"
-            className="object-cover"
-            loading="lazy"
-          />
-        </div>
+      {/* Background - Mobile */}
+      <div className="absolute inset-0 pointer-events-none md:hidden" style={{ height: 'calc(100% + 400px)' }}>
+        <Image
+          src="/images/hero-bg-mobile.webp"
+          alt=""
+          fill
+          sizes="100vw"
+          quality={85}
+          className="object-cover object-top"
+          priority
+        />
       </div>
 
       {/* Background Bubbles - Desktop & Tablet */}

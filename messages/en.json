@@ -34,6 +34,7 @@
   },
   "howItWorks": {
     "title": "How It Works",
+    "subtitle": "Increase your business efficiency in 4 simple steps",
     "askAssistant": "Ask AI Assistant",
     "selectTools": "Select Tools",
     "step1": {
@@ -59,6 +60,10 @@
       "text1": "All services can be",
       "text2": "tried for free",
       "button": "Select Tools"
+    },
+    "chat": {
+      "hint": "Ask AI Assistant",
+      "ariaLabel": "Open chat with AI assistant"
     },
     "products": {
       "durable": {
@@ -91,10 +96,6 @@
       "onboarding": "Onboarding",
       "marketing": "Ads & Copy",
       "business": "Business Processes"
-    },
-    "chat": {
-      "hint": "Ask AI Assistant",
-      "ariaLabel": "Open AI Chat"
     }
   },
   "faq": {
@@ -163,11 +164,24 @@
   },
   "about": {
     "title": "A Bit About Us",
-    "description": "Symplexy is a service that selects AI tools for business. We help entrepreneurs quickly find solutions for automation, optimization, and development.",
-    "mission": "Our mission is to make the integration of artificial intelligence into business simpler, clearer, and more useful",
+    "description": {
+      "part1": "Symplexy",
+      "part2": "is a service that selects",
+      "highlight": "AI tools for business.",
+      "part3": "We help entrepreneurs quickly find solutions for automation, optimization, and development."
+    },
+    "mission": {
+      "title": "Our mission is to make the integration of artificial intelligence into business",
+      "part1": "simpler, clearer",
+      "part2": "and",
+      "part3": "more useful",
+      "part4": ""
+    },
     "whatWeDo": {
       "title": "What We Do",
-      "item1": "Select relevant AI tools for specific business tasks"
+      "item1": "Select relevant AI tools for specific business tasks",
+      "item2": "Create collections for different areas: marketing, design, analytics, management",
+      "item3": "Share tips and news in the field of artificial intelligence"
     },
     "whyChoose": {
       "title": "Why Choose Symplexy",

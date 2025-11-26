@@ -24,7 +24,7 @@ export default function AboutSection() {
       </div>
 
       {/* Crystal Flower Background - hidden on mobile/tablet */}
-      <div className="absolute right-[160px] top-[348px] w-[760px] h-[760px] pointer-events-none hidden lg:block">
+      <div className="absolute right-[160px] top-[398px] w-[760px] h-[760px] pointer-events-none hidden lg:block">
         <Image
           src="/images/flover-about.webp"
           alt=""
@@ -42,26 +42,40 @@ export default function AboutSection() {
             {t('title')}
           </h2>
           <p className="text-[#1c1d27] text-[18px] leading-[28px] font-normal text-left lg:text-center max-w-[343px] md:max-w-[606px]">
-            {t('description')}
+            <span className="text-[#6b9aff] font-semibold">{t('description.part1')}</span> {t('description.part2')} <span className="text-[#6b9aff] font-semibold">{t('description.highlight')}</span> {t('description.part3')}
           </p>
         </div>
 
         {/* Content */}
         <div className="max-w-[343px] md:max-w-[605px]">
-          {/* Mission Statement */}
-          <h3 className="text-[#1c1d27] text-[24px] md:text-[28px] lg:text-[32px] leading-[32px] md:leading-[36px] lg:leading-[40px] font-semibold mb-6 md:mb-7 lg:mb-8">
-            {t('mission')}
-          </h3>
+          {/* Mission Section */}
+          <div className="mb-8 flex flex-col gap-4">
+            <h3 className="text-[#1c1d27] text-[24px] md:text-[28px] lg:text-[32px] leading-[32px] md:leading-[36px] lg:leading-[40px] font-semibold">
+              {t('mission.title')}{' '}
+              <span className="text-[#5289ff]">{t('mission.part1')}</span>{' '}
+              {t('mission.part2')}{' '}
+              <span className="text-[#5289ff]">{t('mission.part3')}</span>{' '}
+              {t('mission.part4')}
+            </h3>
+          </div>
 
           {/* What We Do Section */}
           <div className="mb-8 flex flex-col gap-4">
             <h4 className="text-[#1c1d27] text-[20px] md:text-[22px] lg:text-[24px] leading-[28px] md:leading-[30px] lg:leading-8 font-semibold">
-              {t('whatWeDo.title')}
+              {t("whatWeDo.title")}
             </h4>
-            <ul className="text-[#2f3141] text-[16px] md:text-[17px] lg:text-[18px] leading-[24px] md:leading-[26px] lg:leading-7 font-normal space-y-0">
+            <ul className="text-[#2f3141] text-[16px] md:text-[17px] lg:text-[18px] leading-[24px] md:leading-[26px] lg:leading-7 font-normal space-y-2">
               <li className="flex gap-3">
                 <span className="text-[#5289ff] font-bold">•</span>
                 <span>{t("whatWeDo.item1")}</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-[#5289ff] font-bold">•</span>
+                <span>{t("whatWeDo.item2")}</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-[#5289ff] font-bold">•</span>
+                <span>{t("whatWeDo.item3")}</span>
               </li>
             </ul>
           </div>
