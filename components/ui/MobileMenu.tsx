@@ -83,7 +83,7 @@ export default function MobileMenu() {
           ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}
         `}
       >
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col h-full relative">
           {/* Header - Same as main header */}
           <div className="h-16 px-4 flex items-center justify-between border-b border-[#dae2eb] bg-white shadow-[0_1px_4px_rgba(4,14,34,0.05)]">
             <div className="flex-shrink-0">
@@ -125,7 +125,7 @@ export default function MobileMenu() {
           </nav>
 
           {/* CTA Button */}
-          <div className="mt-12 px-4">
+          <div className="mt-12 px-4 pb-8">
             <div className="w-full max-w-[343px] mx-auto">
               <button
                 onClick={handleToolsClick}
@@ -142,27 +142,23 @@ export default function MobileMenu() {
           </div>
 
           {/* Footer - Messengers & Language */}
-          <div className="mt-auto pb-8 px-4">
+          <div className=" pb-8 px-4 max-h-[200px]">
             <div className="w-full max-w-[343px] mx-auto flex items-start justify-between">
               {/* Messengers */}
               <div className="flex flex-col gap-3">
                 <span className="text-[18px] leading-[28px] text-[#1c1d27]">Месенджери</span>
                 <div className="flex items-center gap-3">
+                  {/* Telegram */}
                   <a href="#" className="w-12 h-12 rounded-full bg-[#e8f0fc] flex items-center justify-center hover:bg-[#d0e1f9] transition-colors">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#5289ff"/>
-                      <path d="M2 17L12 22L22 17" stroke="#5289ff" strokeWidth="2"/>
-                    </svg>
+                    <Image src="/images/social/telegram.svg" alt="Telegram" width={24} height={24} />
                   </a>
+                  {/* Viber */}
                   <a href="#" className="w-12 h-12 rounded-full bg-[#e8f0fc] flex items-center justify-center hover:bg-[#d0e1f9] transition-colors">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M17.5 8.5C17.5 8.5 17.5 12 12 16.5" stroke="#5289ff" strokeWidth="2"/>
-                    </svg>
+                    <Image src="/images/social/viber.svg" alt="Viber" width={24} height={24} />
                   </a>
+                  {/* WhatsApp */}
                   <a href="#" className="w-12 h-12 rounded-full bg-[#e8f0fc] flex items-center justify-center hover:bg-[#d0e1f9] transition-colors">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <circle cx="12" cy="12" r="8" stroke="#5289ff" strokeWidth="2"/>
-                    </svg>
+                    <Image src="/images/social/whatsap.svg" alt="WhatsApp" width={24} height={24} />
                   </a>
                 </div>
               </div>
@@ -174,11 +170,16 @@ export default function MobileMenu() {
               </div>
             </div>
 
-            {/* Decorative Image */}
-            <div className="mt-8 w-full flex justify-center opacity-60">
-              <div className="w-[296px] h-[168px] relative">
-                {/* Placeholder for decorative flower image */}
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-300 via-blue-300 to-cyan-300 rounded-full blur-3xl opacity-30" />
+            {/* Decorative Flower Image */}
+            <div className="  w-full flex justify-center">
+              <div className="w-full h-[326px] absolute -bottom-0">
+                <Image
+                  src="/images/burger-flower.webp"
+                  alt=""
+                  fill
+                  sizes="326px"
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
