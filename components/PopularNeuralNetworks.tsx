@@ -9,49 +9,49 @@ const products = [
     id: 1,
     image: "/images/ai/durable.webp",
     logo: "/images/ai/logo.svg",
-    title: "Durable",
-    description: "AI-конструктор сайтів за 30 секунд",
-    tags: ["Сайти без програмування", "Онбординг", "Реклама і тексти", "Бізнес-процеси"],
+    titleKey: "products.durable.title",
+    descriptionKey: "products.durable.description",
+    tagKeys: ["tags.noCode", "tags.onboarding", "tags.marketing", "tags.business"],
   },
   {
     id: 2,
     image: "/images/ai/HeyGen.webp",
     logo: "/images/ai/logo.svg",
-    title: "HeyGen",
-    description: "Генератор відео з аватарами та озвученням",
-    tags: ["Сайти без програмування", "Онбординг", "Реклама і тексти", "Бізнес-процеси"],
+    titleKey: "products.heygen.title",
+    descriptionKey: "products.heygen.description",
+    tagKeys: ["tags.noCode", "tags.onboarding", "tags.marketing", "tags.business"],
   },
   {
     id: 3,
     image: "/images/ai/Frase.webp",
     logo: "/images/ai/logo.svg",
-    title: "Frase",
-    description: "AI-помічник для SEO-контенту",
-    tags: ["Сайти без програмування", "Онбординг", "Реклама і тексти", "Бізнес-процеси"],
+    titleKey: "products.frase.title",
+    descriptionKey: "products.frase.description",
+    tagKeys: ["tags.noCode", "tags.onboarding", "tags.marketing", "tags.business"],
   },
   {
     id: 4,
     image: "/images/ai/Leonardo.webp",
     logo: "/images/ai/logo.svg",
-    title: "Leonardo AI",
-    description: "AI-платформа для генерації зображень і дизайнів",
-    tags: ["Сайти без програмування", "Онбординг", "Реклама і тексти", "Бізнес-процеси"],
+    titleKey: "products.leonardo.title",
+    descriptionKey: "products.leonardo.description",
+    tagKeys: ["tags.noCode", "tags.onboarding", "tags.marketing", "tags.business"],
   },
   {
     id: 5,
     image: "/images/ai/social-bee.webp",
     logo: "/images/ai/logo.svg",
-    title: "SocialBee",
-    description: "AI-сервіс для планування, генерації та публікації контенту в соцмережах",
-    tags: ["Сайти без програмування", "Онбординг", "Реклама і тексти", "Бізнес-процеси"],
+    titleKey: "products.socialBee.title",
+    descriptionKey: "products.socialBee.description",
+    tagKeys: ["tags.noCode", "tags.onboarding", "tags.marketing", "tags.business"],
   },
   {
     id: 6,
     image: "/images/ai/Leonardo2.webp",
     logo: "/images/ai/logo.svg",
-    title: "Leonardo AI",
-    description: "AI-платформа для генерації зображень і дизайнів",
-    tags: ["Сайти без програмування", "Онбординг", "Реклама і тексти", "Бізнес-процеси"],
+    titleKey: "products.leonardo2.title",
+    descriptionKey: "products.leonardo2.description",
+    tagKeys: ["tags.noCode", "tags.onboarding", "tags.marketing", "tags.business"],
   },
 ];
 
@@ -81,7 +81,14 @@ export default function PopularNeuralNetworks() {
         {/* Cards Grid */}
         <div className="w-full max-w-[343px] md:max-w-[708px] lg:max-w-[1236px] mx-auto flex flex-col md:flex-row md:flex-wrap gap-4 md:gap-6 items-center md:items-start justify-center mb-8 md:mb-12">
           {products.map((product) => (
-            <ProductCard key={product.id} {...product} />
+            <ProductCard 
+              key={product.id} 
+              image={product.image}
+              logo={product.logo}
+              title={t(product.titleKey)}
+              description={t(product.descriptionKey)}
+              tags={product.tagKeys.map((key) => t(key))}
+            />
           ))}
         </div>
 
@@ -125,7 +132,7 @@ export default function PopularNeuralNetworks() {
         {showChatHint && (
           <div className="hidden md:block relative bg-white border border-[#c2c8ef] rounded-[20px] px-4 py-3 shadow-lg">
             <p className="text-[16px] leading-[19px] text-[#182155] whitespace-nowrap">
-              Cпитати ШІ-асистента
+              {t("chat.hint")}
             </p>
             {/* Arrow */}
             <div className="absolute -right-2 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[10px] border-l-white" />
@@ -137,7 +144,7 @@ export default function PopularNeuralNetworks() {
         <button
           onClick={() => setShowChatHint(false)}
           className="w-16 h-16 md:w-[72px] md:h-[72px] rounded-full bg-gradient-to-b from-[#a441cb] to-[#5e72f5] shadow-[0_4px_8px_rgba(19,34,64,0.05),0_4px_4px_rgba(4,14,34,0.05)] hover:shadow-[0_6px_12px_rgba(19,34,64,0.1)] transition-all duration-200 flex items-center justify-center"
-          aria-label="Відкрити AI-чат"
+          aria-label={t("chat.ariaLabel")}
         >
           <svg
             width="32"

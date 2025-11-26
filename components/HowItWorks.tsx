@@ -162,7 +162,7 @@ export default function HowItWorks() {
           <button className="w-[277px] h-14 px-6 py-4 bg-[#5289ff] text-white rounded-[100px] hover:bg-[#4178ee] active:bg-[#3067dd] transition-colors duration-200 flex items-center justify-center gap-2">
             <StarsIcon className="w-6 h-6" />
             <span className="text-[18px] leading-[24px] font-normal">
-              Підібрати інструменти
+              {t('selectTools')}
             </span>
           </button>
         </div>

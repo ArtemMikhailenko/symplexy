@@ -35,6 +35,7 @@
   "howItWorks": {
     "title": "How It Works",
     "askAssistant": "Ask AI Assistant",
+    "selectTools": "Select Tools",
     "step1": {
       "title": "Choose Selection Method",
       "description": "Search for the right neural network using convenient catalog filters, or simply consult with our AI assistant"
@@ -57,21 +58,43 @@
     "cta": {
       "text1": "All services can be",
       "text2": "tried for free",
-      "button": "Go to Catalog"
+      "button": "Select Tools"
     },
-    "subtitle": "Best AI tools for your business",
-    "categories": {
-      "all": "All",
-      "design": "Design",
-      "content": "Content",
-      "video": "Video",
-      "marketing": "Marketing"
+    "products": {
+      "durable": {
+        "title": "Durable",
+        "description": "AI website builder in 30 seconds"
+      },
+      "heygen": {
+        "title": "HeyGen",
+        "description": "Video generator with avatars and voiceover"
+      },
+      "frase": {
+        "title": "Frase",
+        "description": "AI assistant for SEO content"
+      },
+      "leonardo": {
+        "title": "Leonardo AI",
+        "description": "AI platform for generating images and designs"
+      },
+      "socialBee": {
+        "title": "SocialBee",
+        "description": "AI service for planning, generating and publishing social media content"
+      },
+      "leonardo2": {
+        "title": "Leonardo AI",
+        "description": "AI platform for generating images and designs"
+      }
     },
-    "card": {
-      "rating": "Rating",
-      "learnMore": "Learn More",
-      "freeTrial": "Free Trial",
-      "from": "from"
+    "tags": {
+      "noCode": "No-code Websites",
+      "onboarding": "Onboarding",
+      "marketing": "Ads & Copy",
+      "business": "Business Processes"
+    },
+    "chat": {
+      "hint": "Ask AI Assistant",
+      "ariaLabel": "Open AI Chat"
     }
   },
   "faq": {
@@ -116,7 +139,27 @@
     "description": "We track trends in artificial intelligence and regularly share news, reviews, and useful tools for your business development.",
     "viewAll": "View All Articles",
     "readMore": "Read More",
-    "publishedOn": "Published"
+    "publishedOn": "Published",
+    "posts": {
+      "choosingAI": {
+        "tags": "#Automation,#AIforBusiness,#Review",
+        "title": "How to Choose a Neural Network for Your Business",
+        "description": "We analyze which AI tools really help businesses scale and automate processes.",
+        "date": "October 11"
+      },
+      "top5Tools": {
+        "tags": "#Automation,#AIforBusiness,#Review",
+        "title": "Top 5 Artificial Intelligence Tools",
+        "description": "A review of the most popular AI services that are already changing how companies work worldwide.",
+        "date": "October 9"
+      },
+      "savingMoney": {
+        "tags": "#Automation,#AIforBusiness,#Review",
+        "title": "How Neural Networks Save Companies Time and Money",
+        "description": "Practical examples of how artificial intelligence implementation reduces costs and increases efficiency.",
+        "date": "October 8"
+      }
+    }
   },
   "about": {
     "title": "A Bit About Us",

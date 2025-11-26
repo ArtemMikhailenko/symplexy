@@ -6,66 +6,60 @@ import { useTranslations } from "next-intl";
 interface BlogPost {
   id: number;
   image: string;
-  tags: string[];
-  title: string;
-  description: string;
-  date: string;
+  tagsKey: string;
+  titleKey: string;
+  descriptionKey: string;
+  dateKey: string;
 }
 
 const blogPosts: BlogPost[] = [
   {
     id: 1,
     image: "/images/news/news-1.webp",
-    tags: ["#Автоматизація", "#AIдляБізнесу", "#Огляд"],
-    title: "Як обрати нейромережу для свого бізнесу",
-    description:
-      "Розбираємось, які AI-інструменти справді допомагають бізнесу масштабуватись і автоматизувати процеси.",
-    date: "11 жовтня",
+    tagsKey: "posts.choosingAI.tags",
+    titleKey: "posts.choosingAI.title",
+    descriptionKey: "posts.choosingAI.description",
+    dateKey: "posts.choosingAI.date",
   },
   {
     id: 2,
     image: "/images/news/news-2.webp",
-    tags: ["#Автоматизація", "#AIдляБізнесу", "#Огляд"],
-    title: "Топ-5 інструментів штучного інтелекту",
-    description:
-      "Огляд найпопулярніших AI-сервісів, які вже зараз змінюють роботу компаній у всьому світі.",
-    date: "9 жовтня",
+    tagsKey: "posts.top5Tools.tags",
+    titleKey: "posts.top5Tools.title",
+    descriptionKey: "posts.top5Tools.description",
+    dateKey: "posts.top5Tools.date",
   },
   {
     id: 3,
     image: "/images/news/news-3.webp",
-    tags: ["#Автоматизація", "#AIдляБізнесу", "#Огляд"],
-    title: "Як нейромережі економлять час і гроші компаніям",
-    description:
-      "Практичні приклади, як впровадження штучного інтелекту скорочує витрати та підвищує ефективність.",
-    date: "8 жовтня",
+    tagsKey: "posts.savingMoney.tags",
+    titleKey: "posts.savingMoney.title",
+    descriptionKey: "posts.savingMoney.description",
+    dateKey: "posts.savingMoney.date",
   },
   {
     id: 4,
     image: "/images/news/news-1.webp",
-    tags: ["#Автоматизація", "#AIдляБізнесу", "#Огляд"],
-    title: "Як нейромережі економлять час і гроші компаніям",
-    description:
-      "Практичні приклади, як впровадження штучного інтелекту скорочує витрати та підвищує ефективність.",
-    date: "8 жовтня",
+    tagsKey: "posts.savingMoney.tags",
+    titleKey: "posts.savingMoney.title",
+    descriptionKey: "posts.savingMoney.description",
+    dateKey: "posts.savingMoney.date",
   },
   {
     id: 5,
     image: "/images/news/news-2.webp",
-    tags: ["#Автоматизація", "#AIдляБізнесу", "#Огляд"],
-    title: "Як обрати нейромережу для свого бізнесу",
-    description:
-      "Розбираємось, які AI-інструменти справді допомагають бізнесу масштабуватись і автоматизувати процеси.",
-    date: "11 жовтня",
+    tagsKey: "posts.choosingAI.tags",
+    titleKey: "posts.choosingAI.title",
+    descriptionKey: "posts.choosingAI.description",
+    dateKey: "posts.choosingAI.date",
   },
   {
     id: 6,
     image: "/images/news/news-3.webp",
-    tags: ["#Автоматизація", "#AIдляБізнесу", "#Огляд"],
-    title: "Топ-5 інструментів штучного інтелекту",
-    description:
-      "Огляд найпопулярніших AI-сервісів, які вже зараз змінюють роботу компаній у всьому світі.",
-    date: "9 жовтня",
+    tagsKey: "posts.top5Tools.tags",
+    titleKey: "posts.top5Tools.title",
+    descriptionKey: "posts.top5Tools.description",
+    dateKey: "posts.top5Tools.date",
   },
 ];
 
@@ -108,16 +102,19 @@ export default function BlogSection() {
 
             {/* Blog Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {blogPosts.map((post) => (
-                <BlogCard
-                  key={post.id}
-                  image={post.image}
-                  tags={post.tags}
-                  title={post.title}
-                  description={post.description}
-                  date={post.date}
-                />
-              ))}
+              {blogPosts.map((post) => {
+                const tags = t(post.tagsKey).split(',');
+                return (
+                  <BlogCard
+                    key={post.id}
+                    image={post.image}
+                    tags={tags}
+                    title={t(post.titleKey)}
+                    description={t(post.descriptionKey)}
+                    date={t(post.dateKey)}
+                  />
+                );
+              })}
             </div>
 
             {/* View All Button */}
