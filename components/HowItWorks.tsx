@@ -1,38 +1,40 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
 import CTAButton from "./ui/CTAButton";
 import ChatIcon from "./ui/ChatIcon";
 import StarsIcon from "./ui/StarsIcon";
-//
-const steps = [
-  {
-    id: 1,
-    title: "Оберіть спосіб підбору",
-    description: "Шукайте потрібну нейромережу через зручні фільтри в каталозі, або просто порадьтесь з нашим AI-асистентом",
-    hasButton: true,
-  },
-  {
-    id: 2,
-    title: "Знайдіть найкраще рішення",
-    description: "Порівняйте інструменти за функціями, ціною та відгуками — усе в одному місці",
-    hasButton: false,
-  },
-  {
-    id: 3,
-    title: "Інтегруйте у свій бізнес",
-    description: "Отримайте рекомендації та інтегруйте обране рішення в ваші процеси",
-    hasButton: false,
-  },
-  {
-    id: 4,
-    title: "Отримуйте результати",
-    description: "Користувач отримує сервіс, реєструється, тестує і починає користуватись рішенням",
-    hasButton: false,
-  },
-];
 
 export default function HowItWorks() {
+  const t = useTranslations('howItWorks');
+  
+  const steps = [
+    {
+      id: 1,
+      titleKey: "step1.title",
+      descriptionKey: "step1.description",
+      hasButton: true,
+    },
+    {
+      id: 2,
+      titleKey: "step2.title",
+      descriptionKey: "step2.description",
+      hasButton: false,
+    },
+    {
+      id: 3,
+      titleKey: "step3.title",
+      descriptionKey: "step3.description",
+      hasButton: false,
+    },
+    {
+      id: 4,
+      titleKey: "step4.title",
+      descriptionKey: "step4.description",
+      hasButton: false,
+    },
+  ];
   return (
     <section
       id="how-it-works"
@@ -57,7 +59,7 @@ export default function HowItWorks() {
         {/* Top Headline */}
         <div className="text-center mb-12 md:mb-16 lg:mb-[100px]">
           <h2 className="text-[40px] leading-[48px] md:text-[48px] md:leading-[56px] lg:text-[56px] lg:leading-[64px] font-bold text-[#263e6e] mb-4 md:mb-5 lg:mb-6">
-            Як це працює?
+            {t('title')}
           </h2>
           <p className="text-[18px] leading-[28px] font-normal text-[#3c3f54] max-w-[343px] md:max-w-full mx-auto">
             Підвищуйте ефективність свого бізнесу за 4 простих кроки
@@ -134,10 +136,10 @@ export default function HowItWorks() {
                 {/* Text Content */}
                 <div className="flex flex-col gap-2 lg:gap-3">
                   <h3 className="text-[20px] leading-[28px] md:text-[24px] md:leading-[32px] lg:text-[32px] lg:leading-[40px] font-semibold text-[#1c1d27] max-w-full md:max-w-[400px] lg:w-[463px]">
-                    {step.title}
+                    {t(step.titleKey)}
                   </h3>
                   <p className="text-[16px] leading-[24px] md:text-[17px] md:leading-[26px] lg:text-[18px] lg:leading-[28px] font-normal text-[#3c3f54] max-w-full md:max-w-[400px] lg:w-[463px]">
-                    {step.description}
+                    {t(step.descriptionKey)}
                   </p>
                 </div>
 
@@ -146,7 +148,7 @@ export default function HowItWorks() {
                   <button className="w-full max-w-[242px] md:max-w-[279px] lg:w-[279px] h-12 md:h-14 lg:h-14 px-5 md:px-6 lg:px-6 py-3 md:py-4 lg:py-4 rounded-[100px] border border-[#2d4b8c] bg-transparent hover:bg-[#eef3ff] active:bg-[#dae2eb] transition-colors duration-200 flex items-center justify-center gap-2">
                     <ChatIcon className="w-5 h-5 md:w-6 md:h-6 lg:w-6 lg:h-6" />
                     <span className="text-[16px] leading-[24px] md:text-[18px] md:leading-[24px] lg:text-[18px] lg:leading-[24px] font-normal text-[#223a6b]">
-                      Спитати ШІ-асистента
+                      {t('askAssistant')}
                     </span>
                   </button>
                 )}

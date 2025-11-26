@@ -34,19 +34,22 @@
   },
   "howItWorks": {
     "title": "How It Works",
-    "steps": {
-      "choose": {
-        "title": "Choose a Category",
-        "description": "Select the area where you need AI assistance"
-      },
-      "compare": {
-        "title": "Compare Tools",
-        "description": "Review features and pricing of different solutions"
-      },
-      "implement": {
-        "title": "Implement",
-        "description": "Get detailed implementation instructions"
-      }
+    "askAssistant": "Ask AI Assistant",
+    "step1": {
+      "title": "Choose Selection Method",
+      "description": "Search for the right neural network using convenient catalog filters, or simply consult with our AI assistant"
+    },
+    "step2": {
+      "title": "Find the Best Solution",
+      "description": "Compare tools by features, pricing, and reviews — all in one place"
+    },
+    "step3": {
+      "title": "Integrate into Your Business",
+      "description": "Get recommendations and integrate the chosen solution into your processes"
+    },
+    "step4": {
+      "title": "Get Results",
+      "description": "User receives the service, registers, tests, and starts using the solution"
     }
   },
   "aiTools": {
@@ -68,23 +71,38 @@
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Answers to the most common questions",
     "items": {
-      "what": {
-        "question": "What is Symplexy?",
-        "answer": "Symplexy is a platform for selecting optimal AI solutions for your business. We help you find and compare the best neural networks."
+      "assistant": {
+        "question": "What is the assistant for and how does it work?",
+        "answer": "The assistant is a free 24/7 business helper. It selects solutions for marketing, sales, or automation, compares services, and gives advice. You can chat with it like ChatGPT — ask any business questions and get recommendations."
       },
-      "how": {
-        "question": "How to choose a tool?",
-        "answer": "Select a category, specify your needs, and we'll find the best options with detailed comparison of features and prices."
+      "catalog": {
+        "question": "Is this just a neural network catalog?",
+        "answer": "No, Symplexy is a smart platform with an AI assistant. It doesn't just show tools — it analyzes your needs and finds the best solution."
       },
-      "free": {
-        "question": "Is the service free?",
-        "answer": "Yes, tool selection and basic recommendations are completely free. Premium features are available for advanced analysis."
+      "technical": {
+        "question": "Do I need technical knowledge to use it?",
+        "answer": "No, the interface is designed for everyone. Just describe your task in simple language — the assistant will understand and help."
       },
-      "support": {
-        "question": "What support is provided?",
-        "answer": "We provide selection consultations, implementation instructions, and 24/7 technical support."
+      "cost": {
+        "question": "How much does it cost?",
+        "answer": "Symplexy is free. You only pay for the AI tools you choose for your business."
+      },
+      "help": {
+        "question": "How will Symplexy help my business?",
+        "answer": "The platform helps save time searching for tools, selects optimal solutions, and shows how to implement them in your processes."
+      },
+      "choose": {
+        "question": "What if I don't know which tool to choose?",
+        "answer": "Use the AI assistant! Describe your task or problem — it will suggest the best options with explanations."
+      },
+      "safe": {
+        "question": "How safe is it to use Symplexy?",
+        "answer": "We don't store confidential data. The platform only analyzes your queries to select tools."
+      },
+      "add": {
+        "question": "How to add my service to Symplexy?",
+        "answer": "Contact us through the contact form. We'll review your tool and add it to the database after verification."
       }
     }
   },

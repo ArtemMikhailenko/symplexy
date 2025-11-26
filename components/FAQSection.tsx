@@ -2,51 +2,28 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
 
 interface FAQItem {
   id: number;
-  question: string;
-  answer?: string;
+  questionKey: string;
+  answerKey?: string;
 }
 
-const faqData: FAQItem[] = [
-  {
-    id: 1,
-    question: "Для чого на сайті асистент і як він працює?",
-    answer: "Асистент — безкоштовний бізнес-помічник 24/7. Він підбирає рішення для маркетингу, продажів чи автоматизації, порівнює сервіси й дає поради. З ним можна спілкуватись як із ChatGPT — ставити будь-які бізнес-питання й отримувати рекомендації.",
-  },
-  {
-    id: 2,
-    question: "Чи це просто каталог нейромереж?",
-  },
-  {
-    id: 3,
-    question: "Мені потрібні технічні знання, щоб користуватись?",
-  },
-  {
-    id: 4,
-    question: "Скільки це коштує?",
-  },
-  {
-    id: 5,
-    question: "Як Symplexy допоможе моєму бізнесу?",
-  },
-  {
-    id: 6,
-    question: "Що робити, якщо я не знаю, який інструмент вибрати?",
-  },
-  {
-    id: 7,
-    question: "Наскільки безпечно користуватись Simplexy?",
-  },
-  {
-    id: 8,
-    question: "Як додати свій сервіс до Symplexy?",
-  },
+const faqItems: FAQItem[] = [
+  { id: 1, questionKey: "assistant", answerKey: "assistantAnswer" },
+  { id: 2, questionKey: "catalog", answerKey: "catalogAnswer" },
+  { id: 3, questionKey: "technical", answerKey: "technicalAnswer" },
+  { id: 4, questionKey: "cost", answerKey: "costAnswer" },
+  { id: 5, questionKey: "help", answerKey: "helpAnswer" },
+  { id: 6, questionKey: "choose", answerKey: "chooseAnswer" },
+  { id: 7, questionKey: "safe", answerKey: "safeAnswer" },
+  { id: 8, questionKey: "add", answerKey: "addAnswer" },
 ];
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number>(0); // First item open by default
+  const t = useTranslations('faq');
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? -1 : index);
@@ -72,12 +49,12 @@ export default function FAQSection() {
       <div className="relative max-w-[1920px] mx-auto px-4 md:px-12 lg:px-[342px] py-16 md:py-20 lg:py-24">
         {/* Title */}
         <h2 className="text-[40px] md:text-[48px] lg:text-[56px] leading-[48px] md:leading-[56px] lg:leading-[64px] font-bold text-[#263e6e] text-center mb-8 md:mb-12 lg:mb-16">
-          Часті запитання
+          {t('title')}
         </h2>
 
         {/* FAQ Items */}
         <div className="w-full max-w-[343px] md:max-w-[744px] lg:max-w-[1026px] mx-auto flex flex-col">
-          {faqData.map((item, index) => (
+          {faqItems.map((item, index) => (
             <div
               key={item.id}
               className={`w-full transition-all duration-300 ${
@@ -97,13 +74,13 @@ export default function FAQSection() {
                       openIndex === index ? "text-[#4b7de8]" : "text-[#1c1d27]"
                     }`}
                   >
-                    {item.question}
+                    {t(`items.${item.questionKey}.question`)}
                   </h3>
                   
                   {/* Answer - only show if open and answer exists */}
-                  {openIndex === index && item.answer && (
+                  {openIndex === index && item.answerKey && (
                     <p className="text-[18px] md:text-[19px] lg:text-[20px] leading-[28px] md:leading-[30px] lg:leading-[32px] font-normal text-[#2f3141] animate-fadeIn mt-2">
-                      {item.answer}
+                      {t(`items.${item.questionKey}.answer`)}
                     </p>
                   )}
                 </div>
