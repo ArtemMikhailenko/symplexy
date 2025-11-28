@@ -9,6 +9,9 @@ const PopularNeuralNetworks = dynamic(() => import("@/components/PopularNeuralNe
 const NumbersSection = dynamic(() => import("@/components/NumbersSection"), {
   loading: () => <div className="h-[400px]" />,
 });
+const ForWhomSection = dynamic(() => import("@/components/ForWhomSection"), {
+  loading: () => <div className="h-[636px]" />,
+});
 const HowItWorks = dynamic(() => import("@/components/HowItWorks"), {
   loading: () => <div className="h-[600px]" />,
 });
@@ -43,11 +46,14 @@ export default function Home() {
       {/* Numbers Section */}
       <NumbersSection />
 
+      {/* For Whom Section */}
+      <ForWhomSection />
+
       {/* How It Works Section */}
-      <HowItWorks />
+      {/* <HowItWorks /> */}
 
       {/* FAQ Section */}
-      <FAQSection />
+      {/* <FAQSection /> */}
 
       {/* Blog Section */}
       <BlogSection />

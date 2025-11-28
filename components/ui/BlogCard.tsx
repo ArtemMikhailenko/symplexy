@@ -18,10 +18,10 @@ export default function BlogCard({
   readMoreLink = "#",
 }: BlogCardProps) {
   return (
-    <article className="group bg-white rounded-2xl md:rounded-[20px] lg:rounded-[24px] overflow-hidden border-0 md:border md:border-[#eef3ff] shadow-[0px_1px_0px_0px_rgba(4,14,34,0.05)] hover:shadow-[0px_4px_12px_0px_rgba(4,14,34,0.08)] transition-all duration-300">
+    <article className="group h-full flex flex-col bg-white rounded-2xl md:rounded-[20px] lg:rounded-[24px] overflow-hidden border border-[#eef3ff] hover:border-[#5289ff] shadow-[0px_1px_0px_0px_rgba(4,14,34,0.05)] hover:shadow-[0px_4px_12px_0px_rgba(4,14,34,0.08)] transition-all duration-300">
       {/* Image Container */}
-      <div className="relative w-full h-[216px] overflow-hidden p-2">
-        <div className="relative w-full h-full rounded-2xl overflow-hidden">
+      <div className="relative w-full h-[216px] flex-shrink-0 overflow-hidden p-2">
+        <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-transparent group-hover:border-[#5289ff] transition-all duration-300">
           <Image
             src={image}
             alt={title}
@@ -32,9 +32,9 @@ export default function BlogCard({
       </div>
 
       {/* Content */}
-      <div className="px-2 md:px-3 lg:px-4 py-4 md:py-5 lg:py-6 flex flex-col h-full">
+      <div className="px-2 md:px-3 lg:px-4 pt-3 pb-3 md:pt-4 md:pb-4 lg:pt-5 lg:pb-5 flex flex-col flex-grow">
         {/* Tags */}
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mb-3 md:mb-4">
           {tags.slice(0, 2).map((tag, index) => (
             <span
               key={index}
@@ -46,7 +46,7 @@ export default function BlogCard({
         </div>
 
         {/* Text Content */}
-        <div className="flex flex-col gap-1 md:gap-2 mt-4 md:mt-5 lg:mt-6 mb-4 md:mb-5 lg:mb-6 flex-grow">
+        <div className="flex flex-col gap-1 md:gap-2 mb-3 md:mb-4 flex-grow">
           <h3 className="text-[#1c1d27] text-[20px] md:text-[22px] lg:text-[24px] leading-[28px] md:leading-[30px] lg:leading-8 font-semibold">
             {title}
           </h3>
@@ -56,7 +56,7 @@ export default function BlogCard({
         </div>
 
         {/* Date and Read More - Always at bottom */}
-        <div className="flex items-center justify-between pt-2 md:pt-3 lg:pt-4 mt-auto border-t border-transparent">
+        <div className="flex items-center justify-between pt-2 md:pt-3 mt-auto border-t border-[#eef3ff]">
           <span className="text-[#808292] text-[16px] leading-6 font-normal">
             {date}
           </span>

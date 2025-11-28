@@ -16,7 +16,7 @@ export default function HeroSection() {
   return (
     <section 
       id="hero" 
-      className="relative w-full min-h-[900px] md:min-h-[800px] lg:min-h-[914px] bg-white"
+      className="relative w-full min-h-[900px] md:min-h-[800px] 2xl:min-h-[900px] bg-white"
     >
       {/* Background - Mobile */}
       <div className="absolute inset-0 pointer-events-none md:hidden" style={{ height: 'calc(100% + 400px)' }}>
@@ -45,12 +45,12 @@ export default function HeroSection() {
       </div>
 
       {/* Hero Image */}
-      <div className="absolute right-0 bottom-0 w-full md:w-[900px] lg:w-[1110px] h-[550px] md:h-[700px] lg:h-[833px] pointer-events-none">
+      <div className="absolute right-0 bottom-0 w-full md:w-[900px] lg:w-[850px] xl:w-[950px] 2xl:w-[1110px] h-[550px] md:h-[700px] lg:h-[650px] xl:h-[730px] 2xl:h-[833px] pointer-events-none">
         <Image
           src="/images/hero.webp"
           alt="AI Assistant"
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 900px, 1110px"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 900px, (max-width: 1280px) 850px, (max-width: 1536px) 950px, 1110px"
           quality={90}
           className="object-contain object-bottom md:object-right"
           priority
@@ -59,7 +59,7 @@ export default function HeroSection() {
 
       {/* Content Container */}
       <div className="relative w-full max-w-[1280px] mx-auto px-4 md:px-6">
-        <div className="pt-[144px] md:pt-48 lg:pt-[236px] max-w-full md:max-w-[603px]">
+        <div className="pt-[144px] md:pt-48 lg:pt-[136px] max-w-full md:max-w-[603px]">
           {/* Headline */}
           <div className="mb-8 md:mb-12">
             <h1 className="text-[44px] leading-[52px] md:text-5xl md:leading-[60px] lg:text-[72px] lg:leading-[84px] font-bold text-[#1c1d27] mb-4 md:mb-6">

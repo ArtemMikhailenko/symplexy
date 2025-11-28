@@ -32,10 +32,10 @@ export default function FAQSection() {
   return (
     <section
       id="faq"
-      className="relative w-full bg-white overflow-hidden"
+      className="relative w-full bg-white overflow-hidden "
     >
       {/* Background Decorative Elements */}
-      <div className="absolute inset-0 opacity-60 md:opacity-80 lg:opacity-100">
+      <div className="absolute inset-0 top-6 opacity-60 md:opacity-80 lg:opacity-100">
         <Image
           src="/images/faq-bg.webp"
           alt="FAQ background decoration"

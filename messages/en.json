@@ -3,9 +3,11 @@
     "nav": {
       "home": "Home",
       "aiTools": "AI Tools",
-      "howItWorks": "How It Works",
-      "blog": "Blog",
-      "about": "About Us"
+      "forWhom": "For Whom?",
+      "howItWorks": "How It Works?",
+      "faq": "FAQ",
+      "about": "About Us",
+      "blog": "Blog"
     },
     "cta": "Find Tools",
     "languageLabel": "Language"
@@ -18,6 +20,29 @@
     "cta": {
       "primary": "Find Tools",
       "secondary": "Learn More"
+    }
+  },
+  "forWhom": {
+    "title": {
+      "part1": "Service",
+      "highlight": "Symplexy",
+      "part2": "is perfect for you if you are:"
+    },
+    "startup": {
+      "title": "Startup Founder",
+      "description": "Launch MVP faster. Test ideas, create products and attract first users with proven AI tools"
+    },
+    "entrepreneur": {
+      "title": "Entrepreneur",
+      "description": "Automate your business Optimize sales, marketing and analytics without unnecessary costs and technical knowledge"
+    },
+    "freelancer": {
+      "title": "Freelancer",
+      "description": "Increase income without chaos Plan projects, find clients, automate routine and control results"
+    },
+    "team": {
+      "title": "Teams",
+      "description": "Synchronize work Manage tasks, communication and processes in one smart environment"
     }
   },
   "numbers": {
@@ -264,5 +289,12 @@
     "title": "Symplexy - AI Solutions Selection Service for Business",
     "description": "Find the best AI tools for your business. Symplexy helps you select optimal neural networks for workflow automation.",
     "keywords": "AI, artificial intelligence, neural networks, business, automation, Symplexy"
+  },
+  "mobileMenu": {
+    "cta": "Find Tools",
+    "messengers": "Messengers",
+    "language": "Language",
+    "close": "Close menu",
+    "menu": "Menu"
   }
 }

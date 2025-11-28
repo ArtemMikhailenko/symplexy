@@ -148,21 +148,31 @@ export default function Footer() {
               </h4>
               <div className="flex gap-3 justify-center">
                 <a href="#" className="w-12 h-12 bg-[#313c4a] hover:bg-[#5289ff] rounded-lg flex items-center justify-center transition-colors" aria-label="Telegram">
-                  <svg width="20" height="18" viewBox="0 0 20 18" fill="none">
-                    <path d="M19 1L9 11M19 1L13 17L9 11M19 1L1 7L9 11" stroke="#eef3ff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                  <Image
+                    src="/images/social/telegram.svg"
+                    alt="Telegram"
+                    width={23}
+                    height={21}
+                    className="w-5 h-5 brightness-0 invert"
+                  />
                 </a>
                 <a href="#" className="w-12 h-12 bg-[#313c4a] hover:bg-[#5289ff] rounded-lg flex items-center justify-center transition-colors" aria-label="WhatsApp">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M17 9.5C17.0028 10.6199 16.7386 11.7219 16.2294 12.7156C15.7202 13.7094 14.9811 14.5665 14.0753 15.2145C13.1694 15.8625 12.1234 16.2823 11.0242 16.4395C9.92499 16.5967 8.80571 16.4871 7.76 16.12L2 18L3.88 12.24C3.51289 11.1943 3.40326 10.075 3.56048 8.97578C3.71769 7.87659 4.13747 6.83056 4.78551 5.92472C5.43354 5.01888 6.29068 4.27979 7.28439 3.77058C8.27811 3.26136 9.38011 2.99716 10.5 3H11C12.6832 3.0921 14.284 3.78378 15.4854 4.98521C16.6868 6.18664 17.3985 7.81677 17.5 9.5Z" stroke="#eef3ff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                  <Image
+                    src="/images/social/whatsap.svg"
+                    alt="WhatsApp"
+                    width={26}
+                    height={26}
+                    className="w-5 h-5 brightness-0 invert"
+                  />
                 </a>
                 <a href="#" className="w-12 h-12 bg-[#313c4a] hover:bg-[#5289ff] rounded-lg flex items-center justify-center transition-colors" aria-label="Viber">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M10 2C5.58 2 2 5.58 2 10C2 11.85 2.63 13.55 3.68 14.93L2.63 17.63L5.46 16.61C6.77 17.53 8.34 18 10 18C14.42 18 18 14.42 18 10C18 5.58 14.42 2 10 2Z" stroke="#eef3ff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M14 8C14 7.47 13.79 6.96 13.41 6.59C13.04 6.21 12.53 6 12 6" stroke="#eef3ff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M14 8V11L12 9" stroke="#eef3ff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                  <Image
+                    src="/images/social/viber.svg"
+                    alt="Viber"
+                    width={26}
+                    height={28}
+                    className="w-5 h-5 brightness-0 invert"
+                  />
                 </a>
               </div>
             </div>
@@ -370,21 +380,13 @@ export default function Footer() {
                     className="w-10 h-10 bg-[#313c4a] hover:bg-[#5289ff] rounded-lg flex items-center justify-center transition-colors"
                     aria-label="Telegram"
                   >
-                    <svg
-                      width="20"
-                      height="18"
-                      viewBox="0 0 20 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M19 1L9 11M19 1L13 17L9 11M19 1L1 7L9 11"
-                        stroke="#eef3ff"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                    <Image
+                      src="/images/social/telegram.svg"
+                      alt="Telegram"
+                      width={23}
+                      height={21}
+                      className="w-5 h-5 brightness-0 invert"
+                    />
                   </a>
                   {/* WhatsApp */}
                   <a
@@ -392,21 +394,13 @@ export default function Footer() {
                     className="w-10 h-10 bg-[#313c4a] hover:bg-[#5289ff] rounded-lg flex items-center justify-center transition-colors"
                     aria-label="WhatsApp"
                   >
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M17 9.5C17.0028 10.6199 16.7386 11.7219 16.2294 12.7156C15.7202 13.7094 14.9811 14.5665 14.0753 15.2145C13.1694 15.8625 12.1234 16.2823 11.0242 16.4395C9.92499 16.5967 8.80571 16.4871 7.76 16.12L2 18L3.88 12.24C3.51289 11.1943 3.40326 10.075 3.56048 8.97578C3.71769 7.87659 4.13747 6.83056 4.78551 5.92472C5.43354 5.01888 6.29068 4.27979 7.28439 3.77058C8.27811 3.26136 9.38011 2.99716 10.5 3H11C12.6832 3.0921 14.284 3.78378 15.4854 4.98521C16.6868 6.18664 17.3985 7.81677 17.5 9.5Z"
-                        stroke="#eef3ff"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                    <Image
+                      src="/images/social/whatsap.svg"
+                      alt="WhatsApp"
+                      width={26}
+                      height={26}
+                      className="w-5 h-5 brightness-0 invert"
+                    />
                   </a>
                   {/* Viber */}
                   <a
@@ -414,35 +408,13 @@ export default function Footer() {
                     className="w-10 h-10 bg-[#313c4a] hover:bg-[#5289ff] rounded-lg flex items-center justify-center transition-colors"
                     aria-label="Viber"
                   >
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10 2C5.58 2 2 5.58 2 10C2 11.85 2.63 13.55 3.68 14.93L2.63 17.63L5.46 16.61C6.77 17.53 8.34 18 10 18C14.42 18 18 14.42 18 10C18 5.58 14.42 2 10 2Z"
-                        stroke="#eef3ff"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M14 8C14 7.47 13.79 6.96 13.41 6.59C13.04 6.21 12.53 6 12 6"
-                        stroke="#eef3ff"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M14 8V11L12 9"
-                        stroke="#eef3ff"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                    <Image
+                      src="/images/social/viber.svg"
+                      alt="Viber"
+                      width={26}
+                      height={28}
+                      className="w-5 h-5 brightness-0 invert"
+                    />
                   </a>
                 </div>
               </div>

@@ -38,10 +38,8 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="relative w-full overflow-hidden pb-10 lg:pb-10"
-      style={{
-        background: "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 24.57%, rgba(255,255,255,1) 100%)",
-      }}
+      className="relative w-full n pb-10 lg:pb-10 z-10"
+      
     >
       {/* Desktop Decorative Flower/Crystal Image */}
       <div className="hidden lg:block absolute left-5 top-[192px] w-[1316px] h-[1093px] pb-10">

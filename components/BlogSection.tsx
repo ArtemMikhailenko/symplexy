@@ -83,7 +83,7 @@ export default function BlogSection() {
       />
 
       {/* Container with Glass Effect */}
-      <div className="relative mx-auto max-w-[1364px] px-4 lg:px-0">
+      <div className="relative max-w-[1280px] mx-auto px-0 md:px-4 lg:px-6">
         <div className="relative sm:bg-white/[0.001] sm:backdrop-blur-[4px] sm:rounded-[40px] sm:border sm:border-[#eef3ff] sm:p-8 lg:p-16">
           {/* Glass Morphism Effect */}
           <div className="hidden sm:block absolute inset-0 rounded-[40px] bg-gradient-to-br from-white/10 to-transparent pointer-events-none" />

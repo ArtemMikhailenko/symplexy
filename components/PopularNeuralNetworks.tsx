@@ -79,7 +79,7 @@ export default function PopularNeuralNetworks() {
         </h2>
 
         {/* Cards Grid */}
-        <div className="w-full max-w-[343px] md:max-w-[708px] lg:max-w-[1236px] mx-auto flex flex-col md:flex-row md:flex-wrap gap-4 md:gap-6 items-center md:items-start justify-center mb-8 md:mb-12">
+        <div className="w-full max-w-[343px] md:max-w-[708px] lg:max-w-[1236px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
           {products.map((product) => (
             <ProductCard 
               key={product.id} 
