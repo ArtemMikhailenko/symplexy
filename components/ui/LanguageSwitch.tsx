@@ -28,13 +28,14 @@ export default function LanguageSwitch() {
         className={`
           h-full px-2 md:px-3 py-1 md:py-2 min-w-[38px] md:min-w-[46.5px] text-sm md:text-base font-normal
           transition-all duration-300 ease-in-out
-          disabled:opacity-50 disabled:cursor-not-allowed
+          disabled:opacity-50 disabled:pointer-events-none
           ${
             locale === 'uk'
-              ? "bg-[#88a2c0] text-white shadow-sm"
-              : "bg-transparent text-[#88a2c0] hover:bg-[#88a2c0]/40 hover:text-[#223a6b] md:hover:scale-110"
+              ? "bg-[#88a2c0] text-white shadow-sm cursor-default"
+              : "bg-transparent text-[#88a2c0] hover:bg-[#88a2c0]/40 hover:text-[#223a6b] md:hover:scale-110 cursor-pointer"
           }
         `}
+        style={{ cursor: isPending ? 'default' : undefined }}
         aria-label="Українська мова"
         aria-current={locale === 'uk' ? 'true' : 'false'}
       >
@@ -46,13 +47,14 @@ export default function LanguageSwitch() {
         className={`
           h-full px-2 md:px-3 py-1 md:py-2 min-w-[38px] md:min-w-[46.5px] text-sm md:text-base font-normal
           transition-all duration-300 ease-in-out
-          disabled:opacity-50 disabled:cursor-not-allowed
+          disabled:opacity-50 disabled:pointer-events-none
           ${
             locale === 'en'
-              ? "bg-[#88a2c0] text-white shadow-sm"
-              : "bg-transparent text-[#88a2c0] hover:bg-[#88a2c0]/40 hover:text-[#223a6b] md:hover:scale-110"
+              ? "bg-[#88a2c0] text-white shadow-sm cursor-default"
+              : "bg-transparent text-[#88a2c0] hover:bg-[#88a2c0]/40 hover:text-[#223a6b] md:hover:scale-110 cursor-pointer"
           }
         `}
+        style={{ cursor: isPending ? 'default' : undefined }}
         aria-label="English language"
         aria-current={locale === 'en' ? 'true' : 'false'}
       >
