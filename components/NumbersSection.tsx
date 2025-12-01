@@ -149,7 +149,7 @@ export default function NumbersSection() {
           </p>
 
           {/* Source Attribution - Desktop (inline with title) */}
-          <p className="hidden lg:block text-[16px] leading-[24px] font-normal text-white text-center absolute top-[340px] right-0">
+          <p className="hidden lg:block text-[16px] leading-[24px] font-normal text-white text-center absolute top-[340px] right-5">
             за аналітикою McKinsey 2024
           </p>
         </div>

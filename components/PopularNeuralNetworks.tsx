@@ -98,7 +98,7 @@ export default function PopularNeuralNetworks() {
             {t("cta.text1")}{" "}
             <span className="font-semibold">{t("cta.text2")}</span>
           </h3>
-          <button className="w-full max-w-[343px] md:w-auto md:min-w-[241px] h-14 px-6 py-4 bg-[#5289ff] text-white text-[18px] leading-[24px] font-normal rounded-[100px] hover:bg-[#4178ee] active:bg-[#3067dd] transition-colors duration-200 flex items-center justify-center gap-2 whitespace-nowrap">
+          <button className="w-full max-w-[343px] md:w-auto md:min-w-[241px] h-14 px-6 py-4 bg-[#5289ff] text-white text-[18px] leading-[24px] font-normal rounded-[100px] hover:bg-[#2d4b8c] transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap shadow-lg hover:shadow-xl">
             {t("cta.button")}
             <svg
               width="24"

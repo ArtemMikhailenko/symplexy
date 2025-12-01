@@ -135,8 +135,9 @@ export default function MobileMenu() {
                 className="
                   w-full h-14 px-6 py-4 rounded-[100px] text-[18px] leading-[24px] font-normal
                   bg-[#5289ff] text-white
-                  hover:bg-[#4278ef] active:bg-[#3267de]
-                  transition-all duration-200
+                  hover:bg-[#2d4b8c]
+                  transition-all duration-300
+                  shadow-lg hover:shadow-xl
                 "
               >
                 {tMenu('cta')}

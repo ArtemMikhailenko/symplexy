@@ -32,13 +32,13 @@ export default function ForWhomSection() {
   return (
     <section 
       id="for-whom"
-      className="relative w-full py-16 md:py-20 lg:py-[84px] max-w-[1280px] mx-auto px-4 overflow-hidden" 
+      className="relative w-full py-16 md:py-20 lg:py-[84px] max-w-[1280px] mx-auto px-4 overflow" 
     >
       {/* Decorative Background Blur */}
       <div className="absolute top-[292px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] rounded-full bg-[#5289ff] blur-[500px] opacity-60 pointer-events-none z-0 " />
 
       {/* Decorative Center Image - Desktop only */}
-      <div className="absolute top-0 left-0 w-[2400px] h-[1300px] pointer-events-none z-0 hidden md:block">
+      <div className="absolute top-0 -left-110 w-[1800px] h-[1500px] pointer-events-none z-0 hidden md:block">
         <Image
           src="/images/111.png"
           alt=""

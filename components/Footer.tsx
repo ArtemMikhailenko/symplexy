@@ -15,7 +15,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative w-full pt-16 lg:pt-24 pb-16 lg:pb-6 overflow-x-hidden">
+    <footer className="relative w-full pt-16 lg:pt-24 pb-16 lg:pb-6 ">
       {/* Background Decorative Lines */}
       <div className="absolute left-0 bottom-40 w-[500px] h-[642px] pointer-events-none opacity-30 lg:opacity-100">
         <Image
@@ -73,7 +73,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="w-full h-12 px-5 py-3 bg-[#5289ff] hover:bg-[#4278ef] text-white text-[16px] leading-6 font-normal rounded-full transition-all duration-200"
+                  className="w-full h-12 px-5 py-3 bg-[#5289ff] hover:bg-[#2d4b8c] text-white text-[16px] leading-6 font-normal rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   {t("newsletter.subscribe")}
                 </button>
@@ -230,7 +230,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="w-full sm:w-[158px] h-[56px] px-6 py-4 bg-[#5289ff] hover:bg-[#2d4b8c] text-white text-[18px] leading-6 font-normal rounded-full transition-all duration-300 whitespace-nowrap"
+                  className="w-full sm:w-[158px] h-[56px] px-6 py-4 bg-[#5289ff] hover:bg-[#2d4b8c] text-white text-[18px] leading-6 font-normal rounded-full transition-all duration-300 whitespace-nowrap shadow-lg hover:shadow-xl"
                 >
                   {t("newsletter.subscribe")}
                 </button>

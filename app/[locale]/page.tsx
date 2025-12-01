@@ -33,7 +33,7 @@ const Footer = dynamic(() => import("@/components/Footer"), {
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen overflow-x-hidden">
       {/* Hero Section */}
       <HeroSection />
 
@@ -50,10 +50,10 @@ export default function Home() {
       <ForWhomSection />
 
       {/* How It Works Section */}
-      {/* <HowItWorks /> */}
+      <HowItWorks />
 
       {/* FAQ Section */}
-      {/* <FAQSection /> */}
+      <FAQSection />
 
       {/* Blog Section */}
       <BlogSection />
