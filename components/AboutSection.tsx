@@ -19,7 +19,11 @@ export default function AboutSection() {
           src="/images/Cloud-about.webp"
           alt=""
           fill
+          sizes="1027px"
+          quality={70}
           className="object-contain"
+          loading="lazy"
+          priority={false}
         />
       </div>
 
@@ -29,8 +33,11 @@ export default function AboutSection() {
           src="/images/flover-about.webp"
           alt=""
           fill
+          sizes="760px"
+          quality={70}
           className="object-contain"
           loading="lazy"
+          priority={false}
         />
       </div>
 
@@ -118,8 +125,11 @@ export default function AboutSection() {
             src="/images/flover-about.webp"
             alt=""
             fill
+            sizes="396px"
+            quality={70}
             className="object-contain"
             loading="lazy"
+            priority={false}
           />
         </div>
       </div>

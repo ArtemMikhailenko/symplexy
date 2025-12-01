@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useTranslations } from 'next-intl';
+import { useMemo } from 'react';
 import CTAButton from "./ui/CTAButton";
 import ChatIcon from "./ui/ChatIcon";
 import StarsIcon from "./ui/StarsIcon";
@@ -9,7 +10,7 @@ import StarsIcon from "./ui/StarsIcon";
 export default function HowItWorks() {
   const t = useTranslations('howItWorks');
   
-  const steps = [
+  const steps = useMemo(() => [
     {
       id: 1,
       titleKey: "step1.title",
@@ -34,7 +35,8 @@ export default function HowItWorks() {
       descriptionKey: "step4.description",
       hasButton: false,
     },
-  ];
+  ], []);
+  
   return (
     <section
       id="how-it-works"
@@ -47,8 +49,11 @@ export default function HowItWorks() {
           src="/images/crystal-flower.webp"
           alt="Decorative crystal flower"
           fill
+          sizes="(min-width: 1536px) 1316px, (min-width: 1280px) 1000px, 850px"
+          quality={70}
           className="object-contain object-left"
           loading="lazy"
+          priority={false}
         />
       </div>
 
@@ -72,8 +77,11 @@ export default function HowItWorks() {
             src="/images/crystal-flower-mob.webp"
             alt="Decorative crystal flower"
             fill
+            sizes="100vw"
+            quality={70}
             className="object-cover"
             loading="lazy"
+            priority={false}
           />
         </div>
         {/* Gradient overlay for smooth transitions */}

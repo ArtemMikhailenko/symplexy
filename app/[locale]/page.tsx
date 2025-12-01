@@ -11,18 +11,23 @@ const NumbersSection = dynamic(() => import("@/components/NumbersSection"), {
 });
 const ForWhomSection = dynamic(() => import("@/components/ForWhomSection"), {
   loading: () => <div className="h-[636px]" />,
+  ssr: false,
 });
 const HowItWorks = dynamic(() => import("@/components/HowItWorks"), {
   loading: () => <div className="h-[600px]" />,
+  ssr: false,
 });
 const FAQSection = dynamic(() => import("@/components/FAQSection"), {
   loading: () => <div className="h-[500px]" />,
+  ssr: false,
 });
 const BlogSection = dynamic(() => import("@/components/BlogSection"), {
   loading: () => <div className="h-[600px]" />,
+  ssr: false,
 });
 const AboutSection = dynamic(() => import("@/components/AboutSection"), {
   loading: () => <div className="h-[400px]" />,
+  ssr: false,
 });
 const ContactForm = dynamic(() => import("@/components/ContactForm"), {
   loading: () => <div className="h-[500px]" />,

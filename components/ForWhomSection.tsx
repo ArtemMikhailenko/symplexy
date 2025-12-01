@@ -2,11 +2,12 @@
 
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
+import { useMemo } from 'react';
 
 export default function ForWhomSection() {
   const t = useTranslations('forWhom');
 
-  const cards = [
+  const cards = useMemo(() => [
     {
       iconPath: "/images/icons/Icon/24/Rocket.svg",
       titleKey: "startup.title",
@@ -27,7 +28,7 @@ export default function ForWhomSection() {
       titleKey: "team.title",
       descriptionKey: "team.description"
     }
-  ];
+  ], []);
 
   return (
     <section 
@@ -81,6 +82,8 @@ export default function ForWhomSection() {
                     width={28}
                     height={28}
                     className="w-8 h-8"
+                    loading="lazy"
+                    quality={85}
                   />
                 </div>
                 
