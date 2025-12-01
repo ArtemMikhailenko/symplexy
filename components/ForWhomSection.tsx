@@ -36,18 +36,19 @@ export default function ForWhomSection() {
       className="relative w-full py-16 md:py-20 lg:py-[84px] max-w-[1280px] mx-auto px-4 overflow" 
     >
       {/* Decorative Background Blur */}
-      <div className="absolute top-[292px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] rounded-full bg-[#5289ff] blur-[500px] opacity-60 pointer-events-none z-0 " />
+      <div className="absolute top-[292px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] rounded-full bg-[#5289ff] blur-[200px] opacity-50 pointer-events-none z-0 will-change-auto" />
 
-      {/* Decorative Center Image - Desktop only */}
-      <div className="absolute top-0 -left-110 w-[1800px] h-[1500px] pointer-events-none z-0 hidden md:block">
+      {/* Decorative Center Image - Large Desktop only */}
+      <div className="absolute top-0 -left-110 w-[1800px] h-[1500px] pointer-events-none z-0 hidden xl:block">
         <Image
           src="/images/111.webp"
           alt=""
           fill
-          sizes="1800px"
+          sizes="1200px"
           className="object-cover object-bottom"
           loading="lazy"
-          quality={75}
+          quality={60}
+          priority={false}
         />
       </div>
 
@@ -68,7 +69,7 @@ export default function ForWhomSection() {
                 border border-[#c9daff]
                 shadow-[0_1px_4px_rgba(4,14,34,0.05)]
                 hover:shadow-[0_4px_12px_rgba(82,137,255,0.15)]
-                transition-all duration-300
+                transition-shadow duration-300
                 flex flex-col gap-4 md:gap-5 lg:gap-6
               "
             >
