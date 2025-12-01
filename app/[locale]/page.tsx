@@ -34,34 +34,24 @@ const Footer = dynamic(() => import("@/components/Footer"), {
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden">
-      {/* Hero Section */}
       <HeroSection />
 
-      {/* Brands Carousel */}
       <BrandsCarousel />
 
-      {/* Popular Neural Networks Section */}
       <PopularNeuralNetworks />
 
-      {/* Numbers Section */}
       <NumbersSection />
 
-      {/* For Whom Section */}
       <ForWhomSection />
 
-      {/* How It Works Section */}
       <HowItWorks />
 
-      {/* FAQ Section */}
       <FAQSection />
 
-      {/* Blog Section */}
       <BlogSection />
 
-      {/* About Section */}
       <AboutSection />
 
-      {/* Contact Form & Footer - Shared Background */}
       <div
         className="relative bg-[#08142c]"
         style={{
@@ -71,10 +61,8 @@ export default function Home() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        {/* Contact Form */}
         <ContactForm />
 
-        {/* Footer */}
         <Footer />
       </div>
     </main>
