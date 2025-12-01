@@ -77,7 +77,7 @@ export default function BlogSection() {
       className="relative w-full min-h-[1878px] bg-[#1c1d27] py-24 overflow-hidden"
     >
       {/* Background Image */}
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 pointer-events-none">
         <Image
           src="/images/blog-bg.webp"
           alt=""
@@ -86,11 +86,12 @@ export default function BlogSection() {
           quality={75}
           className="object-cover"
           loading="lazy"
+          priority={false}
         />
       </div>
 
       {/* Container with Glass Effect */}
-      <div className="relative max-w-[1280px] mx-auto px-4 md:px-4 lg:px-6">
+      <div className="relative max-w-[1280px] mx-auto px-4 md:px-4 lg:px-6 z-10">
         <div className="relative sm:bg-white/[0.001] sm:backdrop-blur-[4px] sm:rounded-[40px] sm:border sm:border-[#eef3ff] sm:p-8 lg:p-16">
           {/* Glass Morphism Effect */}
           <div className="hidden sm:block absolute inset-0 rounded-[40px] bg-gradient-to-br from-white/10 to-transparent pointer-events-none" />
