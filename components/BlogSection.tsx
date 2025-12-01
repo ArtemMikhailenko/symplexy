@@ -83,7 +83,7 @@ export default function BlogSection() {
       />
 
       {/* Container with Glass Effect */}
-      <div className="relative max-w-[1280px] mx-auto px-0 md:px-4 lg:px-6">
+      <div className="relative max-w-[1280px] mx-auto px-4 md:px-4 lg:px-6">
         <div className="relative sm:bg-white/[0.001] sm:backdrop-blur-[4px] sm:rounded-[40px] sm:border sm:border-[#eef3ff] sm:p-8 lg:p-16">
           {/* Glass Morphism Effect */}
           <div className="hidden sm:block absolute inset-0 rounded-[40px] bg-gradient-to-br from-white/10 to-transparent pointer-events-none" />
@@ -102,7 +102,7 @@ export default function BlogSection() {
 
             {/* Blog Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {blogPosts.map((post) => {
+              {blogPosts.slice(0, 3).map((post) => {
                 const tags = t(post.tagsKey).split(',');
                 return (
                   <BlogCard
@@ -113,6 +113,21 @@ export default function BlogSection() {
                     description={t(post.descriptionKey)}
                     date={t(post.dateKey)}
                   />
+                );
+              })}
+              {/* Additional cards for tablets and desktops */}
+              {blogPosts.slice(3).map((post) => {
+                const tags = t(post.tagsKey).split(',');
+                return (
+                  <div key={post.id} className="hidden md:block">
+                    <BlogCard
+                      image={post.image}
+                      tags={tags}
+                      title={t(post.titleKey)}
+                      description={t(post.descriptionKey)}
+                      date={t(post.dateKey)}
+                    />
+                  </div>
                 );
               })}
             </div>

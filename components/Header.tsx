@@ -60,10 +60,9 @@ export default function Header() {
             </div>
 
             {/* Right: Language Switch + CTA Button */}
-            <div className="flex items-center gap-6">
-              <div className="hidden md:block">
-                <LanguageSwitch />
-              </div>
+            <div className="flex items-center gap-3 md:gap-6">
+              {/* Language Switch - visible on all devices */}
+              <LanguageSwitch />
               <div className="hidden lg:block">
                 <CTAButton 
                   variant="primary"

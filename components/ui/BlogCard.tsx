@@ -47,10 +47,10 @@ export default function BlogCard({
 
         {/* Text Content */}
         <div className="flex flex-col gap-1 md:gap-2 mb-3 md:mb-4 flex-grow">
-          <h3 className="text-[#1c1d27] text-[20px] md:text-[22px] lg:text-[24px] leading-[28px] md:leading-[30px] lg:leading-8 font-semibold">
+          <h3 className="text-[#1c1d27] text-[20px] md:text-[22px] lg:text-[24px] leading-[28px] md:leading-[30px] lg:leading-8 font-semibold line-clamp-3">
             {title}
           </h3>
-          <p className="text-[#3c3f54] text-[16px] md:text-[17px] lg:text-[18px] leading-[24px] md:leading-[26px] lg:leading-7 font-normal">
+          <p className="text-[#3c3f54] text-[16px] md:text-[17px] lg:text-[18px] leading-[24px] md:leading-[26px] lg:leading-7 font-normal line-clamp-3">
             {description}
           </p>
         </div>

@@ -143,9 +143,9 @@ export default function HowItWorks() {
 
                 {/* Button for first step */}
                 {step.hasButton && (
-                  <button className="w-full max-w-[242px] md:max-w-[279px] lg:w-[279px] h-12 md:h-14 lg:h-14 px-5 md:px-6 lg:px-6 py-3 md:py-4 lg:py-4 rounded-[100px] border border-[#2d4b8c] bg-transparent hover:bg-[#eef3ff] active:bg-[#dae2eb] transition-colors duration-200 flex items-center justify-center gap-2">
+                  <button className="w-full max-w-[242px] md:max-w-[279px] lg:w-[279px] h-12 md:h-14 lg:h-14 px-5 md:px-6 lg:px-6 py-3 md:py-4 lg:py-4 rounded-[100px] border-2 border-[#2d4b8c] bg-transparent hover:bg-[#223a6b] hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
                     <ChatIcon className="w-5 h-5 md:w-6 md:h-6 lg:w-6 lg:h-6" />
-                    <span className="text-[16px] leading-[24px] md:text-[18px] md:leading-[24px] lg:text-[18px] lg:leading-[24px] font-normal text-[#223a6b]">
+                    <span className="text-[16px] leading-[24px] md:text-[18px] md:leading-6 lg:text-[18px] lg:leading-6 font-normal text-[#223a6b]">
                       {t('askAssistant')}
                     </span>
                   </button>

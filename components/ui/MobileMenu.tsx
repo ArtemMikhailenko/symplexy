@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import LanguageSwitch from "./LanguageSwitch";
 import Image from "next/image";
 import { useTranslations } from 'next-intl';
 
@@ -145,9 +144,9 @@ export default function MobileMenu() {
             </div>
           </div>
 
-          {/* Footer - Messengers & Language */}
-          <div className="relative   flex-shrink-0">
-            <div className="w-full max-w-[343px] px-4 mx-auto flex items-start justify-between relative z-10">
+          {/* Footer - Messengers */}
+          <div className="relative flex-shrink-0">
+            <div className="w-full max-w-[343px] px-4 mx-auto flex items-start justify-start relative z-10">
               {/* Messengers */}
               <div className="flex flex-col gap-3">
                 <span className="text-[18px] leading-[28px] text-[#1c1d27]">{tMenu('messengers')}</span>
@@ -165,12 +164,6 @@ export default function MobileMenu() {
                     <Image src="/images/social/whatsap.svg" alt="WhatsApp" width={24} height={24} />
                   </a>
                 </div>
-              </div>
-
-              {/* Language Switch */}
-              <div className="flex flex-col gap-3 relative z-10">
-                <span className="text-[18px] leading-[28px] text-[#1c1d27]">{tMenu('language')}</span>
-                <LanguageSwitch />
               </div>
             </div>
 

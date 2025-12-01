@@ -66,7 +66,7 @@ export default function HeroSection() {
               {t('title')}{" "}
               <span className="text-[#5289ff]">{t('titleHighlight')}</span> {t('titleEnd')}
             </h1>
-            <p className="text-[18px] leading-[28px] md:text-lg md:leading-7 text-[#1c1d27]">
+            <p className="text-[18px] leading-[28px] md:text-lg md:leading-7 lg:text-[20px] lg:leading-[32px] text-[#1c1d27]">
               {t('description')}
             </p>
           </div>
@@ -89,11 +89,10 @@ export default function HeroSection() {
             <button
               className="
                 w-full md:w-auto
-                px-6 py-4 rounded-[100px] text-[18px] leading-[24px] font-normal
-                bg-transparent border border-[#2d4b8c] text-[#223a6b]
+                px-6 py-4 rounded-[100px] text-[18px] leading-6 font-normal
+                bg-transparent border-2 border-[#2d4b8c] text-[#223a6b]
                 hover:bg-[#223a6b] hover:text-white
-                active:bg-[#1a2d52]
-                transition-all duration-200 ease-in-out
+                transition-all duration-300 ease-in-out
               "
             >
               {t('cta.secondary')}

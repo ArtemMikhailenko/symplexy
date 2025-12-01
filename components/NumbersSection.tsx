@@ -145,12 +145,28 @@ export default function NumbersSection() {
 
           {/* Source Attribution - Mobile & Tablet */}
           <p className="lg:hidden text-[16px] leading-[24px] font-normal text-white text-left mt-6">
-            за аналітикою McKinsey 2024
+            за аналітикою{" "}
+            <a 
+              href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[#5289ff] hover:text-[#7aa7ff] transition-colors duration-300 underline decoration-[#5289ff] hover:decoration-[#7aa7ff]"
+            >
+              McKinsey 2024
+            </a>
           </p>
 
           {/* Source Attribution - Desktop (inline with title) */}
           <p className="hidden lg:block text-[16px] leading-[24px] font-normal text-white text-center absolute top-[340px] right-5">
-            за аналітикою McKinsey 2024
+            за аналітикою{" "}
+            <a 
+              href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[#5289ff] hover:text-[#7aa7ff] transition-colors duration-300 underline decoration-[#5289ff] hover:decoration-[#7aa7ff]"
+            >
+              McKinsey 2024
+            </a>
           </p>
         </div>
       </div>

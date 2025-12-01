@@ -21,18 +21,18 @@ export default function LanguageSwitch() {
   };
 
   return (
-    <div className="flex items-center h-12 rounded-full border border-[#88a2c0] overflow-hidden bg-white/40">
+    <div className="flex items-center h-9 md:h-12 rounded-full border border-[#88a2c0] overflow-hidden bg-white/40">
       <button
         onClick={() => switchLocale('uk')}
         disabled={isPending}
         className={`
-          h-full px-3 py-2 min-w-[46.5px] text-base font-normal
+          h-full px-2 md:px-3 py-1 md:py-2 min-w-[38px] md:min-w-[46.5px] text-sm md:text-base font-normal
           transition-all duration-300 ease-in-out
           disabled:opacity-50 disabled:cursor-not-allowed
           ${
             locale === 'uk'
               ? "bg-[#88a2c0] text-white shadow-sm"
-              : "bg-transparent text-[#88a2c0] hover:bg-[#88a2c0]/40 hover:text-[#223a6b] hover:scale-110"
+              : "bg-transparent text-[#88a2c0] hover:bg-[#88a2c0]/40 hover:text-[#223a6b] md:hover:scale-110"
           }
         `}
         aria-label="Українська мова"
@@ -44,13 +44,13 @@ export default function LanguageSwitch() {
         onClick={() => switchLocale('en')}
         disabled={isPending}
         className={`
-          h-full px-3 py-2 min-w-[46.5px] text-base font-normal
+          h-full px-2 md:px-3 py-1 md:py-2 min-w-[38px] md:min-w-[46.5px] text-sm md:text-base font-normal
           transition-all duration-300 ease-in-out
           disabled:opacity-50 disabled:cursor-not-allowed
           ${
             locale === 'en'
               ? "bg-[#88a2c0] text-white shadow-sm"
-              : "bg-transparent text-[#88a2c0] hover:bg-[#88a2c0]/40 hover:text-[#223a6b] hover:scale-110"
+              : "bg-transparent text-[#88a2c0] hover:bg-[#88a2c0]/40 hover:text-[#223a6b] md:hover:scale-110"
           }
         `}
         aria-label="English language"
