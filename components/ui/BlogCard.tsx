@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { memo } from "react";
 
 interface BlogCardProps {
   image: string;
@@ -9,7 +10,7 @@ interface BlogCardProps {
   readMoreLink?: string;
 }
 
-export default function BlogCard({
+function BlogCard({
   image,
   tags,
   title,
@@ -26,7 +27,9 @@ export default function BlogCard({
             src={image}
             alt={title}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
           />
         </div>
       </div>
@@ -71,3 +74,5 @@ export default function BlogCard({
     </article>
   );
 }
+
+export default memo(BlogCard);

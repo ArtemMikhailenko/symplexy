@@ -40,10 +40,13 @@ export default function ForWhomSection() {
       {/* Decorative Center Image - Desktop only */}
       <div className="absolute top-0 -left-110 w-[1800px] h-[1500px] pointer-events-none z-0 hidden md:block">
         <Image
-          src="/images/111.png"
+          src="/images/111.webp"
           alt=""
           fill
+          sizes="1800px"
           className="object-cover object-bottom"
+          loading="lazy"
+          quality={75}
         />
       </div>
 

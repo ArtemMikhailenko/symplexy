@@ -1,8 +1,9 @@
 "use client";
 
 import ProductCard from "./ui/ProductCard";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const products = [
   {
@@ -59,17 +60,31 @@ export default function PopularNeuralNetworks() {
   const t = useTranslations("aiTools");
   const [showChatHint, setShowChatHint] = useState(true);
 
+  const productCards = useMemo(() => 
+    products.map((product) => ({
+      ...product,
+      translatedTags: product.tagKeys.map((key) => t(key))
+    })), 
+    [t]
+  );
+
   return (
     <section
       id="ai-tools"
       className="relative w-full py-16 md:py-20 lg:py-24 overflow-hidden"
-      style={{
-        backgroundImage: "url(/images/ai-bg.webp)",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
     >
+      {/* Background Image */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/images/ai-bg.webp"
+          alt=""
+          fill
+          sizes="100vw"
+          quality={75}
+          className="object-cover"
+          loading="lazy"
+        />
+      </div>
 
       {/* Content Container */}
       <div className="relative max-w-[1220px] mx-auto px-4 md:px-6 lg:px-5">
@@ -80,14 +95,14 @@ export default function PopularNeuralNetworks() {
 
         {/* Cards Grid */}
         <div className="w-full max-w-[343px] md:max-w-[708px] lg:max-w-[1236px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
-          {products.map((product) => (
+          {productCards.map((product) => (
             <ProductCard 
               key={product.id} 
               image={product.image}
               logo={product.logo}
               title={t(product.titleKey)}
               description={t(product.descriptionKey)}
-              tags={product.tagKeys.map((key) => t(key))}
+              tags={product.translatedTags}
             />
           ))}
         </div>

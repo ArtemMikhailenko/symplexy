@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { memo } from "react";
 
 interface ProductCardProps {
   image: string;
@@ -9,7 +10,7 @@ interface ProductCardProps {
   tags: string[];
 }
 
-export default function ProductCard({
+function ProductCard({
   image,
   logo,
   title,
@@ -25,7 +26,9 @@ export default function ProductCard({
           src={image}
           alt={title}
           fill
+          sizes="(max-width: 768px) 343px, (max-width: 1024px) 342px, 396px"
           className="object-cover"
+          loading="lazy"
         />
         {/* Blur Overlay */}
         <div className="absolute inset-0 bg-white/30 hidden md:block group-hover:opacity-0 transition-opacity duration-300" />
@@ -38,6 +41,7 @@ export default function ProductCard({
             width={64}
             height={32}
             className="object-contain"
+            loading="lazy"
           />
         </div>
         
@@ -78,3 +82,5 @@ export default function ProductCard({
     </div>
   );
 }
+
+export default memo(ProductCard);

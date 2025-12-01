@@ -2,6 +2,8 @@
 
 import BlogCard from "@/components/ui/BlogCard";
 import { useTranslations } from "next-intl";
+import { useMemo } from "react";
+import Image from "next/image";
 
 interface BlogPost {
   id: number;
@@ -66,21 +68,26 @@ const blogPosts: BlogPost[] = [
 export default function BlogSection() {
   const t = useTranslations("blog");
 
+  const mobileCards = useMemo(() => blogPosts.slice(0, 3), []);
+  const desktopCards = useMemo(() => blogPosts.slice(3), []);
+
   return (
     <section
       id="blog"
       className="relative w-full min-h-[1878px] bg-[#1c1d27] py-24 overflow-hidden"
     >
       {/* Background Image */}
-      <div
-        className="absolute inset-0  pointer-events-none"
-        style={{
-          backgroundImage: "url(/images/blog-bg.webp)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      />
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/images/blog-bg.webp"
+          alt=""
+          fill
+          sizes="100vw"
+          quality={75}
+          className="object-cover"
+          loading="lazy"
+        />
+      </div>
 
       {/* Container with Glass Effect */}
       <div className="relative max-w-[1280px] mx-auto px-4 md:px-4 lg:px-6">
@@ -102,7 +109,7 @@ export default function BlogSection() {
 
             {/* Blog Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {blogPosts.slice(0, 3).map((post) => {
+              {mobileCards.map((post) => {
                 const tags = t(post.tagsKey).split(',');
                 return (
                   <BlogCard
@@ -116,7 +123,7 @@ export default function BlogSection() {
                 );
               })}
               {/* Additional cards for tablets and desktops */}
-              {blogPosts.slice(3).map((post) => {
+              {desktopCards.map((post) => {
                 const tags = t(post.tagsKey).split(',');
                 return (
                   <div key={post.id} className="hidden md:block">
