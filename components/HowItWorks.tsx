@@ -49,8 +49,8 @@ export default function HowItWorks() {
           src="/images/crystal-flower.webp"
           alt="Decorative crystal flower"
           fill
-          sizes="(min-width: 1536px) 1316px, (min-width: 1280px) 1000px, 850px"
-          quality={70}
+          sizes="(min-width: 1536px) 1000px, (min-width: 1280px) 850px, 800px"
+          quality={60}
           className="object-contain object-left"
           loading="lazy"
           priority={false}
@@ -77,8 +77,8 @@ export default function HowItWorks() {
             src="/images/crystal-flower-mob.webp"
             alt="Decorative crystal flower"
             fill
-            sizes="100vw"
-            quality={70}
+            sizes="(max-width: 768px) 800px, 100vw"
+            quality={60}
             className="object-cover"
             loading="lazy"
             priority={false}

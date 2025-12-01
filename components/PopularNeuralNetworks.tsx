@@ -68,6 +68,9 @@ export default function PopularNeuralNetworks() {
     [t]
   );
 
+  const mobileCards = useMemo(() => productCards.slice(0, 3), [productCards]);
+  const desktopCards = useMemo(() => productCards.slice(3), [productCards]);
+
   return (
     <section
       id="ai-tools"
@@ -95,7 +98,8 @@ export default function PopularNeuralNetworks() {
 
         {/* Cards Grid */}
         <div className="w-full max-w-[343px] md:max-w-[708px] lg:max-w-[1236px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
-          {productCards.map((product) => (
+          {/* First 3 cards - visible on all devices */}
+          {mobileCards.map((product) => (
             <ProductCard 
               key={product.id} 
               image={product.image}
@@ -104,6 +108,18 @@ export default function PopularNeuralNetworks() {
               description={t(product.descriptionKey)}
               tags={product.translatedTags}
             />
+          ))}
+          {/* Additional 3 cards - visible only on tablets and desktops */}
+          {desktopCards.map((product) => (
+            <div key={product.id} className="hidden md:block">
+              <ProductCard 
+                image={product.image}
+                logo={product.logo}
+                title={t(product.titleKey)}
+                description={t(product.descriptionKey)}
+                tags={product.translatedTags}
+              />
+            </div>
           ))}
         </div>
 

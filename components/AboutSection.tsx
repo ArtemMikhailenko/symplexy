@@ -14,13 +14,13 @@ export default function AboutSection() {
       <div className="absolute left-[1127px] top-[724px] w-[400px] h-[400px] rounded-full bg-[#ba9dff] blur-[600px] opacity-100 pointer-events-none hidden lg:block" />
 
       {/* Background Cloud */}
-      <div className="absolute right-0 top-[788px] w-[1027px] h-[671px] pointer-events-none hidden lg:block">
+      <div className="absolute right-0 top-[788px] w-[1027px] h-[671px] pointer-events-none hidden xl:block">
         <Image
           src="/images/Cloud-about.webp"
           alt=""
           fill
-          sizes="1027px"
-          quality={70}
+          sizes="800px"
+          quality={60}
           className="object-contain"
           loading="lazy"
           priority={false}
@@ -28,13 +28,13 @@ export default function AboutSection() {
       </div>
 
       {/* Crystal Flower Background - hidden on mobile/tablet */}
-      <div className="absolute right-[160px] top-[398px] w-[760px] h-[760px] pointer-events-none hidden lg:block">
+      <div className="absolute right-[160px] top-[398px] w-[760px] h-[760px] pointer-events-none hidden xl:block">
         <Image
           src="/images/flover-about.webp"
           alt=""
           fill
-          sizes="760px"
-          quality={70}
+          sizes="600px"
+          quality={60}
           className="object-contain"
           loading="lazy"
           priority={false}
@@ -125,8 +125,8 @@ export default function AboutSection() {
             src="/images/flover-about.webp"
             alt=""
             fill
-            sizes="396px"
-            quality={70}
+            sizes="(max-width: 768px) 396px, 400px"
+            quality={60}
             className="object-contain"
             loading="lazy"
             priority={false}
