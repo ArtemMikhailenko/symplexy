@@ -44,7 +44,7 @@ export default function HowItWorks() {
       
     >
       {/* Desktop Decorative Flower/Crystal Image */}
-      <div className="hidden lg:block absolute top-[192px] h-[1093px] pb-10 pointer-events-none -z-10 left-0 lg:w-[850px] xl:w-[1000px] 2xl:w-[1316px] 2xl:left-5">
+      <div className="hidden lg:block absolute top-[192px] h-[1093px] pb-10 pointer-events-none -z-10 left-0 lg:w-[850px] xl:w-[1000px] 2xl:w-[1316px] 2xl:left-25">
         <Image
           src="/images/crystal-flower.webp"
           alt="Decorative crystal flower"
@@ -58,7 +58,7 @@ export default function HowItWorks() {
       </div>
 
       {/* Content Container */}
-      <div className="relative max-w-[1920px] mx-auto px-4 md:px-12 lg:px-[342px] pt-16 md:pt-20 lg:pt-24 z-20">
+      <div className="relative max-w-[1236px] px-4 md:px-12 lg:px-[342px] pt-16 md:pt-20 lg:pt-24 z-20 mx-auto">
         {/* Top Headline */}
         <div className="text-center mb-12 md:mb-16 lg:mb-[100px]">
           <h2 className="text-[40px] leading-[48px] md:text-[48px] md:leading-[56px] lg:text-[56px] lg:leading-[64px] font-bold text-[#263e6e] mb-4 md:mb-5 lg:mb-6">
@@ -88,7 +88,7 @@ export default function HowItWorks() {
         <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-transparent via-30% to-white/80 pointer-events-none" />
       </div>
 
-      <div className="relative max-w-[1920px] mx-auto px-4 md:px-12 lg:px-[342px] z-20">
+      <div className="relative max-w-[1236px] px-4 z-20 mx-auto">
         {/* Steps Container */}
         <div className="flex items-start gap-8 lg:gap-12 lg:justify-end relative z-20">
           {/* Timeline Connector - Mobile/Tablet */}
@@ -151,9 +151,9 @@ export default function HowItWorks() {
 
                 {/* Button for first step */}
                 {step.hasButton && (
-                  <button className="w-full max-w-[242px] md:max-w-[279px] lg:w-[279px] h-12 md:h-14 lg:h-14 px-5 md:px-6 lg:px-6 py-3 md:py-4 lg:py-4 rounded-[100px] border-2 border-[#2d4b8c] bg-transparent hover:bg-[#223a6b] hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
-                    <ChatIcon className="w-5 h-5 md:w-6 md:h-6 lg:w-6 lg:h-6" />
-                    <span className="text-[16px] leading-[24px] md:text-[18px] md:leading-6 lg:text-[18px] lg:leading-6 font-normal text-[#223a6b]">
+                  <button className="group w-full max-w-[242px] md:max-w-[279px] lg:w-[279px] h-12 md:h-14 lg:h-14 px-5 md:px-6 lg:px-6 py-3 md:py-4 lg:py-4 rounded-[100px] border-2 border-[#2d4b8c] bg-transparent text-[#223a6b] hover:bg-[#223a6b] hover:text-white hover:border-[#223a6b] transition-all duration-300 flex items-center justify-center gap-2">
+                    <ChatIcon className="w-5 h-5 md:w-6 md:h-6 lg:w-6 lg:h-6 group-hover:text-white transition-colors" />
+                    <span className="text-[16px] leading-[24px] md:text-[18px] md:leading-6 lg:text-[18px] lg:leading-6 font-normal group-hover:text-white transition-colors">
                       {t('askAssistant')}
                     </span>
                   </button>

@@ -28,7 +28,7 @@ export default function AboutSection() {
       </div>
 
       {/* Crystal Flower Background - hidden on mobile/tablet */}
-      <div className="absolute right-[160px] top-[398px] w-[760px] h-[760px] pointer-events-none hidden xl:block">
+      <div className="absolute right-[140px] xl:right-[80px] 2xl:right-45 top-[398px] w-[760px] h-[760px] pointer-events-none hidden xl:block">
         <Image
           src="/images/flover-about.webp"
           alt=""

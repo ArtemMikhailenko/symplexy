@@ -19,7 +19,7 @@ function ProductCard({
   tags,
 }: ProductCardProps) {
   return (
-    <div className="w-full max-w-[343px] md:max-w-[342px] lg:max-w-[396px] h-full flex flex-col bg-white border border-[#dae2eb] rounded-2xl md:rounded-[24px] overflow-hidden hover:shadow-lg transition-shadow duration-300 group mx-auto">
+    <div className="w-full max-w-[343px] md:max-w-[342px] lg:max-w-[396px] h-full flex flex-col bg-white border-2 border-[#dae2eb] rounded-2xl md:rounded-[24px] overflow-hidden hover:border-[#5289ff] hover:shadow-[0_12px_32px_rgba(82,137,255,0.3)] transition-all duration-300 group mx-auto">
       {/* Image Container */}
       <div className="relative w-full h-48 md:h-[192px] lg:h-[222px] flex-shrink-0 ">
         <Image
@@ -30,8 +30,7 @@ function ProductCard({
           className="object-cover"
           loading="lazy"
         />
-        {/* Blur Overlay */}
-        <div className="absolute inset-0 bg-white/30 hidden md:block group-hover:opacity-0 transition-opacity duration-300" />
+  
         
         {/* Logo */}
         <div className="absolute top-4 left-4 w-16 h-8 rounded-lg overflow-hidden flex items-center justify-center bg-white/80">

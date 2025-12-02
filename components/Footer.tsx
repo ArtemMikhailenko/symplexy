@@ -209,32 +209,47 @@ export default function Footer() {
           
           </div>
           <div className="flex gap-[68px] justify-between">
-            <div className="bg-[#15202e] border border-[#525c71] rounded-[24px] p-6 max-h-[230px]">
-              <div className="mb-6">
-                <h3 className="text-[#eceefc] text-[24px] leading-8 font-medium mb-2">
-                  {t("newsletter.title")}
-                </h3>
-                <p className="text-[#d7daeb] text-[18px] leading-7 font-normal">
-                  {t("newsletter.description")}
-                </p>
+            <div className="flex flex-col gap-8">
+              <div className="bg-[#15202e] border border-[#525c71] rounded-[24px] p-6 max-h-[230px]">
+                <div className="mb-6">
+                  <h3 className="text-[#eceefc] text-[24px] leading-8 font-medium mb-2">
+                    {t("newsletter.title")}
+                  </h3>
+                  <p className="text-[#d7daeb] text-[18px] leading-7 font-normal">
+                    {t("newsletter.description")}
+                  </p>
+                </div>
+
+                <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4">
+                  <input
+                    type="email"
+                    placeholder={t("newsletter.emailPlaceholder")}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="flex-1 sm:w-[340px] h-[56px] px-5 py-4 bg-[#eef3ff] border border-[#afc9ff] rounded-2xl text-[#3c3f54] text-[16px] leading-6 placeholder:text-[#3c3f54] focus:outline-none focus:border-[#5289ff] transition-colors"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    className="w-full sm:w-[158px] h-[56px] px-6 py-4 bg-[#5289ff] hover:bg-[#2d4b8c] text-white text-[18px] leading-6 font-normal rounded-full transition-all duration-300 whitespace-nowrap shadow-lg hover:shadow-xl"
+                  >
+                    {t("newsletter.subscribe")}
+                  </button>
+                </form>
               </div>
 
-              <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4">
-                <input
-                  type="email"
-                  placeholder={t("newsletter.emailPlaceholder")}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 sm:w-[340px] h-[56px] px-5 py-4 bg-[#eef3ff] border border-[#afc9ff] rounded-2xl text-[#3c3f54] text-[16px] leading-6 placeholder:text-[#3c3f54] focus:outline-none focus:border-[#5289ff] transition-colors"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="w-full sm:w-[158px] h-[56px] px-6 py-4 bg-[#5289ff] hover:bg-[#2d4b8c] text-white text-[18px] leading-6 font-normal rounded-full transition-all duration-300 whitespace-nowrap shadow-lg hover:shadow-xl"
-                >
-                  {t("newsletter.subscribe")}
-                </button>
-              </form>
+              {/* Bottom Legal Section */}
+              <div className="pt-6 border-t border-[#42455c]">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-[#686a7d] text-[14px] leading-5">
+                  <a href="#" className="hover:text-[#5289ff] transition-colors">
+                    {t("legal.terms")}
+                  </a>
+                  <a href="#" className="hover:text-[#5289ff] transition-colors">
+                    {t("legal.privacy")}
+                  </a>
+                  <p>{t("copyright")}</p>
+                </div>
+              </div>
             </div>
           {/* Right Side - Navigation & Social */}
           <div className="w-full  flex flex-col gap-8">
@@ -246,7 +261,7 @@ export default function Footer() {
                 <li className="pb-2">
                   <a
                     href="#catalog"
-                    className="block text-[#eef3ff] text-[24px] leading-8 font-medium hover:text-[#5289ff] transition-colors"
+                    className="block text-[#eef3ff] text-[20px] leading-8 font-medium hover:text-[#5289ff] transition-colors"
                   >
                     {t("menu.catalog")}
                   </a>
@@ -254,7 +269,7 @@ export default function Footer() {
                 <li className="py-2">
                   <a
                     href="#assistant"
-                    className="block text-[#eef3ff] text-[24px] leading-8 font-medium hover:text-[#5289ff] transition-colors"
+                    className="block text-[#eef3ff] text-[20px] leading-8 font-medium hover:text-[#5289ff] transition-colors"
                   >
                     {t("menu.assistant")}
                   </a>
@@ -262,7 +277,7 @@ export default function Footer() {
                 <li className="py-2">
                   <a
                     href="#how-it-works"
-                    className="block text-[#eef3ff] text-[24px] leading-8 font-medium hover:text-[#5289ff] transition-colors"
+                    className="block text-[#eef3ff] text-[20px] leading-8 font-medium hover:text-[#5289ff] transition-colors"
                   >
                     {t("menu.howItWorks")}
                   </a>
@@ -270,7 +285,7 @@ export default function Footer() {
                 <li className="py-2">
                   <a
                     href="#about"
-                    className="block text-[#eef3ff] text-[24px] leading-8 font-medium hover:text-[#5289ff] transition-colors"
+                    className="block text-[#eef3ff] text-[20px] leading-8 font-medium hover:text-[#5289ff] transition-colors"
                   >
                     {t("menu.about")}
                   </a>
@@ -278,7 +293,7 @@ export default function Footer() {
                 <li className="py-2">
                   <a
                     href="#blog"
-                    className="block text-[#eef3ff] text-[24px] leading-8 font-medium hover:text-[#5289ff] transition-colors"
+                    className="block text-[#eef3ff] text-[20px] leading-8 font-medium hover:text-[#5289ff] transition-colors"
                   >
                     {t("menu.blog")}
                   </a>
@@ -420,18 +435,6 @@ export default function Footer() {
               </div>
             </div>
             </div>
-            {/* Bottom Legal Section */}
-        <div className="pt-6 border-t border-[#42455c]">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-[#686a7d] text-[14px] leading-5">
-            <a href="#" className="hover:text-[#5289ff] transition-colors">
-              {t("legal.terms")}
-            </a>
-            <a href="#" className="hover:text-[#5289ff] transition-colors">
-              {t("legal.privacy")}
-            </a>
-            <p>{t("copyright")}</p>
-          </div>
-        </div>
           </div>
         </div>
             
